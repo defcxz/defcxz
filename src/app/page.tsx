@@ -1,15 +1,15 @@
-import Link from "next/link";
 import Image from "next/image";
 import { CreatePost } from "~/app/_components/create-post";
 import { getServerAuthSession } from "~/server/auth";
 import { api } from "~/trpc/server";
+// import Link from "next/link";
 
-export default async function Home() {
+export default function Home() {
   // const hello = await api.post.hello.query({ text: "from tRPC" });
   // const session = await getServerAuthSession();
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-slate-950 text-white">
+    <main className="flex min-h-screen flex-col items-center justify-center text-white select-none">
       <div className="container flex flex-col items-center justify-center gap-5 px-4 py-16 ">
         {/*<h1 className="text-5xl font-extrabold tracking-tight sm:text-[5rem]">*/}
         {/*  Create <span className="text-[hsl(280,100%,70%)]">T3</span> App*/}
@@ -56,24 +56,25 @@ export default async function Home() {
         {/*  </div>*/}
         {/*</div>*/}
 
-        {/*<CrudShowcase />*/}
+        <CrudShowcase />
         <Image
-          className={'w-15'}
-          src={'./mi-logo.svg'}
+          className={'w-13'}
+          src={'./Recurso 1.svg'}
           alt={'Logo'}
-          width={200}
-          height={200}
+          width={100}
+          height={100}
           priority={true}
           style={{
             filter: 'invert(1)',
           }}
         />
         <div>
-          <h1 className="text-5xl font-regular tracking-tight sm:text-[2rem]">
-            Mario G.
-          </h1>
-          <h2 className="text-2xl font-extralight tracking-tight sm:text-[1rem]">
-            Web dev. Aspirant
+          {/*<h1 className="text-5xl font-bold tracking-wider sm:text-[2rem]">*/}
+          {/*  Mario G.*/}
+          {/*</h1>*/}
+          <h2 className="text-2xl font-extralight sm:text-[1rem]">
+            {/*Web dev. Aspirant*/}
+            Under construction. Come back later! ✨
           </h2>
         </div>
       </div>

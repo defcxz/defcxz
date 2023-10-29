@@ -1,15 +1,9 @@
 import "~/styles/globals.css";
 
-import { Inter } from "next/font/google";
-import { GeistSans, GeistMono } from "geist/font";
+import { GeistSans } from "geist/font";
 import { headers } from "next/headers";
 
 import { TRPCReactProvider } from "~/trpc/react";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
 
 export const metadata = {
   title: "Mario G. | defcxz",
@@ -24,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={GeistSans.className}>
-      <body>
+      <body className={'bg-gray-950'}>
         <TRPCReactProvider headers={headers()}>{children}</TRPCReactProvider>
       </body>
     </html>
