@@ -72,7 +72,7 @@ export default function Home() {
           {/*<h1 className="text-5xl font-bold tracking-wider sm:text-[2rem]">*/}
           {/*  Mario G.*/}
           {/*</h1>*/}
-          <h2 className="text-2xl font-extralight sm:text-[1rem]">
+          <h2 className="font-light tracking-wide sm:text-[1rem]">
             {/*Web dev. Aspirant*/}
             Under construction. Come back later! ✨
           </h2>
