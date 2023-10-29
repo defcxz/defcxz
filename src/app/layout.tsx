@@ -4,6 +4,7 @@ import { GeistSans } from "geist/font";
 import { headers } from "next/headers";
 
 import { TRPCReactProvider } from "~/trpc/react";
+import React from "react";
 
 export const metadata = {
   title: "Mario G. | defcxz",
@@ -18,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={GeistSans.className}>
-      <body className={'bg-gray-950'}>
+      <body>
         <TRPCReactProvider headers={headers()}>{children}</TRPCReactProvider>
       </body>
     </html>

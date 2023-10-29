@@ -1,5 +1,6 @@
 /** @type {import('prettier').Config & import('prettier-plugin-tailwindcss').options} */
-const config = {
+let config;
+config = {
   plugins: ["prettier-plugin-tailwindcss"],
 };
 
