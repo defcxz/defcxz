@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import logo from '../public/logo.svg'
 
 export default function Home(): React.ReactElement {
   // Priorizar la carga de la imagen del logo
@@ -8,7 +9,7 @@ export default function Home(): React.ReactElement {
       priority={true}
       width={100}
       height={100}
-      src={'https://storage.googleapis.com/def-bucket-01/logo.svg'}
+      src={logo}
       alt={'Logo'}
       quality={5}
       placeholder={'empty'}
