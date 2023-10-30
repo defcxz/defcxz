@@ -1,6 +1,6 @@
 import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
-import './globals.css'
+import '../styles/globals.css'
 import { GeistSans } from 'geist/font'
 
 export const metadata: Metadata = {
