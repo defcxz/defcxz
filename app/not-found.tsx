@@ -12,7 +12,7 @@ export default function Home() {
         />
         <div>
           <p className="font-light tracking-wide sm:text-[1rem]">
-            This page doesn't exist. :p
+            This page does not exist. :p
           </p>
         </div>
       </div>
