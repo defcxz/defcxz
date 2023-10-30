@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
 import './globals.css'
 import { GeistSans } from 'geist/font'
@@ -16,6 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={GeistSans.className}>
         {children}
+        <Analytics/>
       </body>
     </html>
   )
