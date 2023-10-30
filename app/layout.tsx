@@ -1,7 +1,8 @@
-import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
-import '../styles/globals.css'
+import { Analytics } from '@vercel/analytics/react'
 import { GeistSans } from 'geist/font'
+import Nav from '@/app/components/Nav/page'
+import '../styles/globals.css'
 
 export const metadata: Metadata = {
   title: 'Mario G. | defcxz',
@@ -16,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={GeistSans.className}>
+        <Nav/>
         {children}
         <Analytics/>
       </body>
