@@ -41,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${noto.className} bg-slate-950`} >
-        <Nav/>
+        {/*<Nav/>*/}
         {children}
         <Analytics/>
         <Footer/>
