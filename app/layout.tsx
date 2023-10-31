@@ -1,13 +1,37 @@
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
-import { GeistSans } from 'geist/font'
-import Nav from '@/app/components/Nav/page'
+import og from '../public/og.jpeg'
+import { Noto_Sans_JP  } from "@next/font/google";
+
+import Nav from './components/Nav/page'
+import Footer from './components/Footer/page'
 import '../styles/globals.css'
 
+let title = 'Mario G. | defcxz';
+let desc = 'My humble space on the internet. ✨';
 export const metadata: Metadata = {
-  title: 'Mario G. | defcxz',
-  description: 'My humble space on the internet. ✨',
+  metadataBase: new URL('https://defcxz.vercel.app'),
+
+  title: title,
+  description: desc,
+
+  openGraph: {
+    url: 'https://defcxz.vercel.app',
+    title: title,
+    description: desc,
+    images: [
+      {
+        url: og.src,
+        alt: 'og image',
+      },
+    ],
+  },
 }
+
+const noto = Noto_Sans_JP({
+  display: 'swap',
+  subsets: ['latin-ext'],
+})
 
 export default function RootLayout({
   children,
@@ -16,10 +40,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={GeistSans.className}>
+      <body className={`${noto.className} bg-slate-950`} >
         <Nav/>
         {children}
         <Analytics/>
+        <Footer/>
       </body>
     </html>
   )
