@@ -11,11 +11,11 @@ export default function Text() {
   };
 
   return (
-    <p
-      className="font-bold tracking-[2rem] text-[5rem] text-orange-400"
-      style={{ textShadow: "#ff9b71 1px 0 30px" }}>
+    <>
       {text.split('').map((char, index) => (
-        <motion.span
+        <motion.p
+          className="flex justify-center px-3 font-bold text-[4rem] text-orange-400"
+          style={{ textShadow: "#ff9b71 1px 0 30px" }}
           key={index}
           variants={charVariants}
           initial="hidden"
@@ -23,8 +23,8 @@ export default function Text() {
           transition={{ delay: index * .7, duration: 2 }}
         >
           {char}
-        </motion.span>
+        </motion.p>
       ))}
-    </p>
-  )
+    </>
+    )
 }
