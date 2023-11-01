@@ -27,16 +27,16 @@ export default function Text() {
           </motion.p>
         ))}
       </div>
-      <motion.p
-        className={'text-center mt-3 font-regular text-sm text-orange-400'}
-        style={{ textShadow: "#ff9b71 0 0 10px" }}
-        variants={charVariants}
-        initial="hidden"
-        animate="visible"
-        transition={{ delay: 2.5, duration: 2 }}
-      >
-        Coming (really) soon...
-      </motion.p>
+      {/*<motion.p*/}
+      {/*  className={'text-center mt-3 font-regular text-sm text-orange-400'}*/}
+      {/*  style={{ textShadow: "#ff9b71 0 0 10px" }}*/}
+      {/*  variants={charVariants}*/}
+      {/*  initial="hidden"*/}
+      {/*  animate="visible"*/}
+      {/*  transition={{ delay: 2.5, duration: 2 }}*/}
+      {/*>*/}
+      {/*  Coming (really) soon...*/}
+      {/*</motion.p>*/}
     </>
     )
 }
