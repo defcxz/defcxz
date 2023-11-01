@@ -28,7 +28,7 @@ export default function Text() {
         ))}
       </div>
       <motion.p
-        className={'text-center font-regular text-sm text-orange-400'}
+        className={'text-center mt-3 font-regular text-sm text-orange-400'}
         style={{ textShadow: "#ff9b71 0 0 10px" }}
         variants={charVariants}
         initial="hidden"
