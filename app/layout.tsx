@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
 import og from '../public/og.jpeg'
-import { Noto_Sans_JP  } from "@next/font/google";
+import { Noto_Serif_JP  } from "@next/font/google";
 
 import Nav from './components/Nav/page'
 import Footer from './components/Footer/page'
@@ -28,9 +28,9 @@ export const metadata: Metadata = {
   },
 }
 
-const noto = Noto_Sans_JP({
-  display: 'swap',
-  subsets: ['latin-ext'],
+const noto = Noto_Serif_JP({
+  weight: ['300', '400', '900'],
+  subsets: ['latin'],
 })
 
 export default function RootLayout({
