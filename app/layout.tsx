@@ -40,7 +40,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${noto.className} bg-slate-950`} >
+      <body className={`${noto.className} bg-gray-950`} >
         {/*<Nav/>*/}
         {children}
         <Analytics/>
