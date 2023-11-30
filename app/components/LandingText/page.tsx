@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 
 export default function Text() {
-  const text = 'マリオ';
+  const text = 'Mario G.-';
 
   const charVariants = {
     hidden: { opacity: 0 },
@@ -13,10 +13,9 @@ export default function Text() {
   return (
     <>
       <div className={'flex justify-center'}>
-        {text.split('').map((char, index) => (
-          <motion.p
-            className="flex justify-center px-3 font-black text-[4rem] text-orange-400"
-            style={{ textShadow: "#ff9b71 0 0 30px" }}
+        {text.split('-').map((char, index) => (
+          <motion.h1
+            className="flex justify-center px-3 font-bold text-[4rem] flex-col"
             key={index}
             variants={charVariants}
             initial="hidden"
@@ -24,19 +23,9 @@ export default function Text() {
             transition={{ delay: index * .8, duration: 1 }}
           >
             {char}
-          </motion.p>
+          </motion.h1>
         ))}
       </div>
-      {/*<motion.p*/}
-      {/*  className={'text-center mt-3 font-regular text-sm text-orange-400'}*/}
-      {/*  style={{ textShadow: "#ff9b71 0 0 10px" }}*/}
-      {/*  variants={charVariants}*/}
-      {/*  initial="hidden"*/}
-      {/*  animate="visible"*/}
-      {/*  transition={{ delay: 2.5, duration: 2 }}*/}
-      {/*>*/}
-      {/*  Coming (really) soon...*/}
-      {/*</motion.p>*/}
     </>
     )
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
-import og from '../public/og.jpeg'
 import { Noto_Serif_JP  } from "@next/font/google";
+import og from '../public/og.jpeg'
 
 import Nav from './components/Nav/page'
 import Footer from './components/Footer/page'
@@ -10,13 +10,13 @@ import '../styles/globals.css'
 let title = 'Mario G. | defcxz';
 let desc = 'My humble space on the internet. ✨';
 export const metadata: Metadata = {
-  metadataBase: new URL('https://defcxz.vercel.app'),
+  metadataBase: new URL('https://def.works'),
 
   title: title,
   description: desc,
 
   openGraph: {
-    url: 'https://defcxz.vercel.app',
+    url: 'https://def.works',
     title: title,
     description: desc,
     images: [
@@ -40,7 +40,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${noto.className} bg-gray-950`} >
+      <body className={`${noto.className}`} >
         {/*<Nav/>*/}
         {children}
         <Analytics/>
