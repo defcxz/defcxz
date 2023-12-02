@@ -3,8 +3,6 @@ import { Analytics } from '@vercel/analytics/react'
 import { Noto_Serif_JP  } from "@next/font/google";
 import og from '../public/og.jpeg'
 
-import Nav from './components/Nav/page'
-import Footer from './components/Footer/page'
 import '../styles/globals.css'
 
 let title = 'Mario G. | defcxz';
@@ -26,6 +24,20 @@ export const metadata: Metadata = {
       },
     ],
   },
+
+  twitter: {
+    creator: '@defcxz',
+    site: '@defcxz',
+    card: 'summary_large_image',
+    title: title,
+    description: desc,
+    images: [
+      {
+        url: og.src,
+        alt: 'og image',
+      },
+    ]
+  },
 }
 
 const noto = Noto_Serif_JP({
@@ -34,18 +46,18 @@ const noto = Noto_Serif_JP({
 })
 
 export default function RootLayout({
-  children,
-}: {
+                                     children,
+                                   }: {
   children: React.ReactNode
 }) {
   return (
     <html lang="en">
-      <body className={`${noto.className}`} >
-        {/*<Nav/>*/}
-        {children}
-        <Analytics/>
-        {/*<Footer/>*/}
-      </body>
+    <body className={`${noto.className}`} >
+    <main className={'flex min-h-screen items-center justify-center select-none'}>
+      {children}
+      <Analytics/>
+    </main>
+    </body>
     </html>
   )
 }
