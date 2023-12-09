@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Noto_Serif_JP  } from "@next/font/google";
 import og from '../public/og.jpeg'
 
@@ -45,18 +46,15 @@ const noto = Noto_Serif_JP({
   subsets: ['latin'],
 })
 
-export default function RootLayout({
-                                     children,
-                                   }: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children } : { children: React.ReactNode }) {
   return (
     <html lang="en">
-    <body className={`${noto.className}`} >
-    <main className={'flex min-h-screen items-center justify-center select-none'}>
-      {children}
-      <Analytics/>
-    </main>
+    <body className={`${noto.className}`}>
+      <main className={'flex min-h-screen items-center justify-center select-none'}>
+        {children}
+        <Analytics/>
+        <SpeedInsights/>
+      </main>
     </body>
     </html>
   )
