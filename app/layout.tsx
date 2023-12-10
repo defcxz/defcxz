@@ -50,11 +50,9 @@ export default function RootLayout({ children } : { children: React.ReactNode })
   return (
     <html lang="en">
     <body className={`${noto.className}`}>
-      <main className={'flex min-h-screen items-center justify-center select-none'}>
         {children}
         <Analytics/>
         <SpeedInsights/>
-      </main>
     </body>
     </html>
   )
