@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 
 export default function Text() {
-  const text = 'Mario G.-';
+  const text = 'マリオ';
 
   const charVariants = {
     hidden: { opacity: 0 },
@@ -13,7 +13,7 @@ export default function Text() {
   return (
     <>
       <div className={'flex justify-center'}>
-        {text.split('-').map((char, index) => (
+        {text.split('').map((char, index) => (
           <motion.h1
             className="flex justify-center px-3 font-bold text-[4rem] flex-col"
             key={index}

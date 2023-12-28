@@ -7,7 +7,7 @@ const nextConfig = {
                 hostname: 'media.tenor.com'
             },
         ],
-    },
+    }
 }
 
 module.exports = nextConfig
