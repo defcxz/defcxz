@@ -11,3 +11,4 @@ To install dependencies, run `npm install`.
 To run the website locally, run `npm run dev` and open [http://localhost:3000](http://localhost:3000) in your browser.
 
 Every suggestion is welcome. Feel free to open an issue or submit a pull request.
+``
