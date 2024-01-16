@@ -1,18 +1,22 @@
+import { sql } from '@vercel/postgres'
 import Image from 'next/image'
-import photos from './photo.json'
+import photo from '@/public/photos/DSC01326.jpg'
 
-export default function Photo() {
+
+export default async function Photo(): Promise<JSX.Element> {
+  const { rows } = await sql`SELECT * FROM comentario`;
   return (
-    <main className="flex min-h-screen items-center justify-center content-around select-none">
-      <p className={'text-white w-[20vw]'}>col 1</p>
-      <Image
-        className={'w-[40vw]'}
-        alt={'Image'}
-        src={photos[0].ruta}
-        width={100}
-        height={100}
-      />
-      <p className={'text-white w-[20vw]'}>col 3</p>
+    <main className="flex min-h-screen items-center justify-center overflow-hidden">
+      {rows.map((row) => (
+        <div key={row.id}>
+          <Image
+            className={'top-0 left-0 -z-10 h-[100vh] w-auto max-w-none'}
+            alt={'test image'}
+            src={photo}
+          />
+          <p className="text-sm">{row.comentario}</p>
+        </div>
+      ))}
     </main>
   )
 }

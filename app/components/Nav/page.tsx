@@ -1,13 +1,17 @@
 export default function Nav() {
   return (
-    <nav className={'fixed p-4 backdrop-blur w-screen'}>
+    <nav className={'fixed w-screen bg-gradient-to-b from-black ...'}>
+      <div className={'nav-icon'}>
+        <span className={'nav-icon__line color-white'}></span>
+        <span className={'nav-icon__line color-white'}></span>
+      </div>
       <p
-        className={'w-100 text-center mt-3 font-regular text-orange-400'}
+        className={'text-center mt-5'}
         style={{
-          textShadow: '#ff9b71 0 0 10px'
+          textShadow: '#fff 0 0 10px'
         }}
       >
-        def.
+        mg.
       </p>
     </nav>
   )
