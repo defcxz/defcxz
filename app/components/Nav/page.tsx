@@ -6,7 +6,7 @@ export default function Nav() {
         <span className={'nav-icon__line color-white'}></span>
       </div>
       <p
-        className={'text-center mt-5'}
+        className={'text-center mt-5 mb-5 font-bold text-2xl'}
         style={{
           textShadow: '#fff 0 0 10px'
         }}

@@ -51,10 +51,10 @@ export default function RootLayout({ children } : { children: React.ReactNode })
   return (
     <html lang="en">
     <body className={`${noto.className}`}>
-    <Navbar/>
-    {children}
-    <Analytics/>
-    <SpeedInsights/>
+      <Navbar/>
+      {children}
+      <Analytics/>
+      <SpeedInsights/>
     </body>
     </html>
   )
