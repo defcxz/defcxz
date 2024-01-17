@@ -7,17 +7,17 @@ import og from '../public/og.jpeg'
 
 import '../styles/globals.css'
 
-let title = 'Mario G. | defcxz';
+let metadataTitle = 'Mario G. | defcxz';
 let desc = 'My humble space on the internet. ✨';
 export const metadata: Metadata = {
   metadataBase: new URL('https://def.works'),
 
-  title: title,
+  title: metadataTitle,
   description: desc,
 
   openGraph: {
     url: 'https://def.works',
-    title: title,
+    title: metadataTitle,
     description: desc,
     images: [
       {
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     creator: '@defcxz',
     site: '@defcxz',
     card: 'summary_large_image',
-    title: title,
+    title: metadataTitle,
     description: desc,
     images: [
       {
