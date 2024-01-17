@@ -23,7 +23,7 @@ export default async function Photo(): Promise<JSX.Element> {
           const base64Image = row.photo.toString('base64')
           const imageUrl = `data:image/jpeg;base64,${base64Image}`
           return (
-            <div>
+            <div key={row.id}>
               <Image
                 alt="Picture"
                 className="absolute -z-10 inset-0 object-cover w-full h-full"
