@@ -1,7 +1,9 @@
 'use client'
-import { usePathname } from "next/navigation";
-export default function Navbar() {
 
+import { usePathname } from "next/navigation";
+
+
+export default function Navbar() {
   const pathname = usePathname();
 
   let paths = [
@@ -10,14 +12,19 @@ export default function Navbar() {
       title: ''
     },
     {
-      path: '/photo',
-      title: 'Photo'
+      path: '/photography',
+      title: 'Photography'
     },
     {
-      path: '/photo/admin',
+      path: '/photography/admin',
       title: 'Admin Panel'
     },
+    {
+      path: '/api',
+      title: 'API Administration'
+    }
   ]
+
   let titlePage = pathname === '/' ? '' : paths.find((path) => path.path === pathname)?.title;
 
   return (
@@ -28,7 +35,7 @@ export default function Navbar() {
           textShadow: '#fff 0 0 10px'
         }}
       >
-        mg.
+        マリオ
       </p>
       <p hidden={pathname === '/'} className={'text-3xl'}>/</p>
       <p className={'tracking-wider mt-1 text-lg'}>{titlePage}</p>

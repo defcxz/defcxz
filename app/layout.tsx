@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Noto_Serif_JP  } from "@next/font/google";
+import { Noto_Serif_JP  } from 'next/font/google'
 import Navbar from './components/Nav/page'
 import og from '../public/og.jpeg'
 
@@ -52,7 +52,7 @@ export default function RootLayout({ children } : { children: React.ReactNode })
     <html lang="en">
     <body className={`${noto.className}`}>
       <Navbar/>
-      {children}
+        {children}
       <Analytics/>
       <SpeedInsights/>
     </body>

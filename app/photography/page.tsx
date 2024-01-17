@@ -1,23 +1,63 @@
+import { Metadata } from 'next'
 import { sql } from '@vercel/postgres'
 import Image from 'next/image'
+import og from '../public/og.jpeg'
 import { JSX, SVGProps } from 'react';
+
+let metadataTitle = 'Photography | defcxz';
+let desc = 'I dont like Instagram anymore. I made own thing.';
+export const metadata: Metadata = {
+  metadataBase: new URL('https://def.works/photography'),
+
+  title: metadataTitle,
+  description: desc,
+
+  openGraph: {
+    url: 'https://def.works/photography',
+    title: metadataTitle,
+    description: desc,
+    images: [
+      {
+        url: og.src,
+        alt: 'og image',
+      },
+    ],
+  },
+
+  twitter: {
+    creator: '@defcxz',
+    site: '@defcxz',
+    card: 'summary_large_image',
+    title: metadataTitle,
+    description: desc,
+    images: [
+      {
+        url: og.src,
+        alt: 'og image',
+      },
+    ]
+  },
+}
+
 
 function capitalizeFirstLetter(string: string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 export default async function Photo(): Promise<JSX.Element> {
+  
   const {rows} = await sql`SELECT f.titulo title, 
-                                                    f.foto photo, 
-                                                    f.descripcion description, 
-                                                    f.fecha date, 
-                                                    u.descripcion location  
-                                              FROM fotografia f, 
-                                                    ubicacion u 
-                                              WHERE f.ubicacion_id = u.id`;
+                                  f.foto photo, 
+                                  f.descripcion description, 
+                                  f.fecha date, 
+                                  u.descripcion location  
+                            FROM fotografia f, 
+                                  ubicacion u 
+                            WHERE f.ubicacion_id = u.id`
+                            ;
 
   return (
-    <main className="flex h-screen items-center justify-center">
+    <main className="flex h-[100dvh] overflow-hidden items-center justify-center">
       <div className="relative h-screen w-screen">
         { rows.map((row) => {
           const base64Image = row.photo.toString('base64')
