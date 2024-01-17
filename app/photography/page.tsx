@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import { sql } from '@vercel/postgres'
 import Image from 'next/image'
-import og from '../public/og.jpeg'
+import og from '@/public/og.jpeg'
 import { JSX, SVGProps } from 'react';
 
 let metadataTitle = 'Photography | defcxz';

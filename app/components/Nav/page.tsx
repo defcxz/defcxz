@@ -16,8 +16,8 @@ export default function Navbar() {
       title: 'Photography'
     },
     {
-      path: '/photography/admin',
-      title: 'Admin Panel'
+      path: '/photography/upload',
+      title: 'Upload Photo'
     },
     {
       path: '/api',
