@@ -12,7 +12,6 @@ export default function Photo() {
               className="absolute -z-10 inset-0 object-cover w-full h-full"
               height={1920}
               src={photo.url_foto}
-              quality={100}
               style={{
                 aspectRatio: "1080/1920",
                 objectFit: "cover",
