@@ -6,6 +6,10 @@ const nextConfig = {
                 protocol: 'https',
                 hostname: 'media.tenor.com'
             },
+            {
+                protocol: 'https',
+                hostname: 'def-works-bucket.s3.sa-east-1.amazonaws.com'
+            },
         ],
     }
 }

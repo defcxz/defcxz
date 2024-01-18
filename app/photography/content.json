@@ -1,0 +1,12 @@
+{
+    "fotografias": [
+      {
+        "id": 1,
+        "titulo": "Pajarillo pajarillo",
+        "descripcion": "Escuché un pajarito por la ventana y tomé la cámara. Me costó pillarlo, pero lo logré encontrar entre las hojitas.",
+        "ubicacion": "Santiago, Chile",
+        "fecha": "Agosto, 2023",
+        "url_foto": "https://def-works-bucket.s3.sa-east-1.amazonaws.com/photos/DSC01326.jpg"
+      }
+    ]
+  }
