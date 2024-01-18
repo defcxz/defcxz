@@ -21,13 +21,15 @@ model comentario {
 }
 
 model fotografia {
-  id           Int       @id @default(autoincrement())
-  foto         Bytes?
-  descripcion  String?   @db.Text
-  fecha        DateTime? @db.Date
-  ubicacion_id Int?
-  album_id     Int?
-  titulo       String?   @db.VarChar(255)
+  id             Int       @id @default(autoincrement())
+  titulo         String?   @db.VarChar(255)
+  foto           Bytes?
+  descripcion    String?   @db.Text
+  fecha          DateTime? @db.Date
+  temp_ubicacion String?   @db.VarChar(255)
+  temp_album_id  Int?
+  ubicacion_id   Int?
+  album_id       Int?
 }
 
 model ubicacion {
