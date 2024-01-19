@@ -7,6 +7,14 @@
         "ubicacion": "Santiago, Chile",
         "fecha": "Agosto, 2023",
         "url_foto": "https://def-works-bucket.s3.sa-east-1.amazonaws.com/photos/DSC01326.jpg"
-      }
+      },
+        {
+            "id": 2,
+            "titulo": "Ciudad",
+            "descripcion": "",
+            "ubicacion": "Santiago, Chile",
+            "fecha": "2023",
+            "url_foto": "https://def-works-bucket.s3.sa-east-1.amazonaws.com/photos/IMG_20210731_143402-3.jpg"
+        }
     ]
   }
