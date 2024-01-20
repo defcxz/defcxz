@@ -11,7 +11,7 @@ export default function Photo() {
   };
 
   return (
-    <main className="flex flex-col items-center justify-center pt-[6rem] gap-5">
+    <main className="flex flex-col items-center justify-center pt-[7rem] gap-5">
       {photos.fotografias.map((photo, index) =>
         <motion.div key={index}
                     className={`${expandedIndex === index ? ' transition-all duration-500 ease-in-out fixed inset-0 h-[100dvh] z-50 rounded-none' :

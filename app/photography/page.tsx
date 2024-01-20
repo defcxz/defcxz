@@ -28,10 +28,11 @@ export const metadata: Metadata = {
 export default function Photo() {
   return (
     <Suspense fallback={ <Loading/> }>
+      {/*<h5 className={'text-center opacity-70 pt-16'}>Mi little space of photography.</h5>*/}
       <Photography/>
       <Image src={logo}
              alt={'logo'}
-             className={'invert w-12 mx-auto mt-40'}
+             className={'invert w-12 mx-auto mt-16'}
       />
     </Suspense>
   )
