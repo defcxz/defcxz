@@ -25,7 +25,7 @@ export default function Photo() {
   return (
     <main className="flex flex-col items-center justify-center">
       {photos.fotografias.map((photo, index) => (
-        <div key={index} className="relative h-screen w-screen overflow-hidden">
+        <div key={index} className="relative h-[100dvh] w-screen overflow-hidden">
           <div>
             <Image
               alt="Picture"
