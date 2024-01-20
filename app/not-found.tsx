@@ -4,7 +4,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-center text-white select-none">
       <div className="container flex flex-col items-center justify-center gap-5 px-4 py-16 ">
         <Image
-          loading={'lazy'}
+          priority={true}
           width={500}
           height={500}
           src={'https://media.tenor.com/laSBfhRhTEYAAAAd/guy-arguing.gif'}

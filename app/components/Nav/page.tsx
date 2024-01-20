@@ -28,7 +28,7 @@ export default function Navbar() {
   let titlePage = pathname === '/' ? '' : paths.find((path) => path.path === pathname)?.title;
 
   return (
-    <nav className={'flex gap-3 items-center fixed pt-5 pb-5 md:px-60 w-screen bg-gradient-to-b from-black sm:justify-start justify-center ...'}>
+    <nav className={'flex gap-3 items-center fixed pt-5 pb-5 md:px-60 w-screen bg-gradient-to-b from-black sm:justify-start justify-center z-[100]'}>
       <p
         className={'font-bold text-2xl'}
         style={{
