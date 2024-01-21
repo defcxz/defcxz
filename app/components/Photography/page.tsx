@@ -5,17 +5,18 @@ import photos from '@/app/photography/content.json'
 import { useState } from 'react';
 
 export default function Photo() {
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);  const charVariants = {
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const charVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
   };
 
   return (
-    <main className="flex flex-col items-center justify-center pt-[7rem] gap-5">
+    <main className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:px-20 items-center justify-center pt-[7rem]">
       {photos.fotografias.map((photo, index) =>
         <motion.div key={index}
-                    className={`${expandedIndex === index ? ' transition-all duration-500 ease-in-out fixed inset-0 h-[100dvh] z-50 rounded-none' :
-                      'transition-all duration-500 ease-in-out w-11/12 h-32 rounded-3xl'}`}
+                    className={`${expandedIndex === index ? 'transition-all duration-500 ease-in-out fixed inset-0 h-[100dvh] z-50 rounded-none' :
+                      'transition-all duration-500 ease-in-out w-11/12 mx-auto lg:w-full h-36 lg:h-64 lg:hover:z-40 lg:hover:scale-110 lg:cursor-pointer rounded-3xl'}`}
                     style={{
                       backgroundImage: `url(${photo.url_foto})`,
                       backgroundBlendMode: 'darken',
@@ -25,11 +26,11 @@ export default function Photo() {
                     variants={charVariants}
                     initial="hidden"
                     animate="visible"
-                    transition={{ delay: index * .2, duration: 1.5 }}
+                    transition={{ delay: 1+(index * .2), duration: 1.5 }}
                     onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
         >
           <div className={`${expandedIndex === index ? 'absolute bottom-7 w-screen' : ''}`}>
-            <h1 className={'text-xl font-bold pt-16 pl-4'}>
+            <h1 className={'text-xl font-bold pt-20 lg:pt-48 pl-4 lg:pl-6'}>
               {photo.titulo}
             </h1>
             <p className={`w-[90%] py-2 mx-auto text-sm font-extralight ${expandedIndex === index ? '' : 'hidden'}`}>

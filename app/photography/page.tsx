@@ -23,6 +23,20 @@ export const metadata: Metadata = {
       },
     ],
   },
+
+  twitter: {
+    creator: '@defcxz',
+    site: '@defcxz',
+    card: 'summary_large_image',
+    title: 'Photography - Mario G.',
+    description: 'My space for photography. 📸',
+    images: [
+      {
+        url: photos.fotografias[0].url_foto,
+        alt: 'og image',
+      },
+    ]
+  },
 }
 
 export default function Photo() {
@@ -32,7 +46,7 @@ export default function Photo() {
       <Photography/>
       <Image src={logo}
              alt={'logo'}
-             className={'invert w-12 mx-auto mt-16'}
+             className={'invert w-12 mx-auto my-16'}
       />
     </Suspense>
   )

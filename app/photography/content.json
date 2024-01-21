@@ -1,20 +1,52 @@
 {
-    "fotografias": [
-      {
-        "id": 1,
-        "titulo": "Pajarillo pajarillo",
-        "descripcion": "Escuché un pajarito por la ventana y tomé la cámara. Me costó pillarlo, pero lo logré encontrar entre las hojitas.",
-        "ubicacion": "Santiago, Chile",
-        "fecha": "Agosto, 2023",
-        "url_foto": "https://def-works-bucket.s3.sa-east-1.amazonaws.com/photos/DSC01326-min.jpg"
-      },
-        {
-            "id": 2,
-            "titulo": "Ciudad",
-            "descripcion": "",
-            "ubicacion": "Santiago, Chile",
-            "fecha": "2023",
-            "url_foto": "https://def-works-bucket.s3.sa-east-1.amazonaws.com/photos/IMG_20210731_143402-3.jpg"
-        }
-    ]
-  }
+  "fotografias": [
+    {
+      "id": 1,
+      "titulo": "Pajarillo pajarillo",
+      "descripcion": "Escuché un pajarito por la ventana y tomé la cámara. Me costó pillarlo, pero lo logré encontrar entre las hojitas.",
+      "ubicacion": "Santiago, Chile",
+      "fecha": "Agosto, 2023",
+      "url_foto": "https://def-works-bucket.s3.sa-east-1.amazonaws.com/photos/DSC01326-min.jpg"
+    },
+    {
+      "id": 2,
+      "titulo": "Ciudad",
+      "descripcion": "",
+      "ubicacion": "Santiago, Chile",
+      "fecha": "2023",
+      "url_foto": "https://def-works-bucket.s3.sa-east-1.amazonaws.com/photos/IMG_20210731_143402-3-min.jpg"
+    },
+    {
+      "id": 3,
+      "titulo": "Uvas",
+      "descripcion": "Esta es una foto express que le tomé a unas uvas que estaban creciendo en el patio de mi casa.",
+      "ubicacion": "Santiago, Chile",
+      "fecha": "Febrero, 2022",
+      "url_foto": "https://def-works-bucket.s3.sa-east-1.amazonaws.com/photos/IMG_2184.jpeg"
+    },
+    {
+      "id": 4,
+      "titulo": "",
+      "descripcion": "Sacada en el Primavera Sound Santiago 2022",
+      "ubicacion": "Santiago, Chile",
+      "fecha": "Noviembre, 2022",
+      "url_foto": "https://def-works-bucket.s3.sa-east-1.amazonaws.com/photos/IMG_4932.png"
+    },
+    {
+      "id": 5,
+      "titulo": "Us ♡",
+      "descripcion": "",
+      "ubicacion": "Santiago, Chile",
+      "fecha": "Agosto, 2022",
+      "url_foto": "https://def-works-bucket.s3.sa-east-1.amazonaws.com/photos/000117160026.jpg"
+    },
+    {
+      "id": 6,
+      "titulo": "Usss ♡",
+      "descripcion": "",
+      "ubicacion": "Santiago, Chile",
+      "fecha": "Agosto, 2022",
+      "url_foto": "https://def-works-bucket.s3.sa-east-1.amazonaws.com/photos/000117160034.jpg"
+    }
+  ]
+}
