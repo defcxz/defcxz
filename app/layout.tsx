@@ -7,8 +7,8 @@ import og from '../public/og.jpeg'
 
 import '../styles/globals.css'
 
-let metadataTitle = 'Mario G. | defcxz';
-let desc = 'My humble space on the internet. ✨';
+let metadataTitle = 'Mario G. | defcxz: Software Engineer, Photographer Wannabe, I would like to sleep 25 hours a day.';
+let desc = 'This is my little space on the Internet, there is not much to see here for now, but I hope this website will grow over time.';
 export const metadata: Metadata = {
   metadataBase: new URL('https://def.works'),
 
