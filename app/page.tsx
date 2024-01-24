@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className={'flex min-h-screen items-center justify-center select-none'}>
+    <main className={'flex min-h-[100dvh] items-center justify-center select-none'}>
       <div className="container py-16 ">
         <h1
           className="flex justify-center px-3 font-bold text-[4rem]">
