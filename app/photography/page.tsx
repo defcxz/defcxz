@@ -41,8 +41,10 @@ export const metadata: Metadata = {
 
 export default function Photo() {
   return (
-    <Suspense fallback={ <Loading/> }>
-      <Photography/>
+    <main>
+      <Suspense fallback={ <Loading/> }>
+          <Photography/>
+      </Suspense>
       <div className={'h-[100dvh] lg:mt-36 lg:h-auto flex flex-col justify-center items-center'}>
         <p className={'text-center dark:text-white px-10 lg:text-xs'}>
               These are some of my favorite photos, hopefully the next time you visit this page there will be more. ✨
@@ -52,6 +54,6 @@ export default function Photo() {
                 className={'dark:invert w-11 mx-auto mt-5 mb-16'}
         />
       </div>
-    </Suspense>
+    </main>
   )
 }

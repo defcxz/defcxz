@@ -17,7 +17,7 @@ export default function Home() {
           <br></br>
           <Link href={'/photography'} className={'font-bold italic mx-2 underline'}>
             Photographer
-          </Link>wannabe.
+          </Link> wannabe.
         </div>
       </div>
     </main>
