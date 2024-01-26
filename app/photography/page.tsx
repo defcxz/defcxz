@@ -43,15 +43,15 @@ export default function Photo() {
   return (
     <main>
       <Suspense fallback={ <Loading/> }>
-          <Photography/>
+        <Photography/>
       </Suspense>
       <div className={'h-[100dvh] lg:mt-36 lg:h-auto flex flex-col justify-center items-center'}>
         <p className={'text-center dark:text-white px-10 lg:text-xs'}>
-              These are some of my favorite photos, hopefully the next time you visit this page there will be more. ✨
+          These are some of my favorite photos, hopefully the next time you visit this page there will be more. ✨
         </p>
         <Image src={logo}
-                alt={'logo'}
-                className={'dark:invert w-11 mx-auto mt-5 mb-16'}
+               alt={'logo'}
+               className={'dark:invert w-11 mx-auto mt-5 mb-16'}
         />
       </div>
     </main>
