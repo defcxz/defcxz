@@ -1,6 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Loading from '@/app/components/Loader/page'
+import { Suspense } from 'react'
 import photos from '@/app/photography/content.json'
 import Image from 'next/image'
 
@@ -17,13 +19,15 @@ export default function Photo() {
           transition={{delay: 0.2 * index, duration: 1.5}}
         >
           <figure>
-            <Image
-              className={'w-full h-auto lg:object-cover lg:aspect-square lg:hover:scale-125 lg:hover:z-50 lg:transition-all lg:duration-500 lg:ease-in-out'}
-              src={photo.url_foto}
-              alt={photo.titulo}
-              width={'500'}
-              height={'500'}
-            />
+            <Suspense fallback={<Loading/>}>
+              <Image
+                className={'w-full h-auto lg:object-cover lg:aspect-square lg:hover:scale-125 lg:hover:z-50 lg:transition-all lg:duration-500 lg:ease-in-out'}
+                src={photo.url_foto}
+                alt={photo.titulo}
+                width={'500'}
+                height={'500'}
+              />
+            </Suspense>
             <figcaption className={'text-xs'}>
               {photo.titulo} —— <i>{photo.fecha}</i>
             </figcaption>
