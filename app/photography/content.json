@@ -47,6 +47,14 @@
       "ubicacion": "Santiago, Chile",
       "fecha": "Agosto, 2022",
       "url_foto": "https://def-works-bucket.s3.sa-east-1.amazonaws.com/photos/000117160034.jpg"
+    },
+    {
+      "id": 7,
+      "titulo": "Gatiño",
+      "descripcion": "",
+      "ubicacion": "Santiago, Chile",
+      "fecha": "2023",
+      "url_foto": "https://def-works-bucket.s3.sa-east-1.amazonaws.com/photos/DSC01338.JPG"
     }
   ]
 }
