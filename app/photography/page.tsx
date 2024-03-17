@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
-import Loading from '../components/Loader/page'
 import Photogrid from '../components/Photogrid/page'
+import Loading from '../components/Loader/page'
 import { Suspense } from 'react'
 import Image from 'next/image'
 import logo from '@/public/logo.svg'
@@ -42,18 +42,12 @@ export const metadata: Metadata = {
 export default function Photo() {
   return (
     <main>
-      <Suspense fallback={<Loading/>}>
-        <Photogrid/>
-        <div className={'h-[100dvh] lg:mt-36 lg:h-auto flex flex-col justify-center items-center'}>
-          <p className={'text-center dark:text-white px-10 text-xs lg:text-lg'}>
-            These are some of my favorite photos, hopefully the next time you visit this page there will be more. ✨
-          </p>
-          <Image src={logo}
-                 alt={'logo'}
-                 className={'dark:invert w-11 mx-auto mt-5 mb-16'}
-          />
-        </div>
-      </Suspense>
+      <Photogrid/>
+      <div className={'mt-40 lg:mt-36 flex flex-col justify-center items-center'}>
+        <p className={'text-center dark:text-white px-10'}>
+          These are some of my favorite photos, hopefully the next time you visit this page there will be more. ✨
+        </p>
+      </div>
     </main>
   )
 }

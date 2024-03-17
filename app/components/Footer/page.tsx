@@ -1,11 +1,7 @@
 export default function Footer() {
   return(
-    <footer>
-      <div className="flex flex-col items-center justify-center px-4 py-16 ">
-        <p className="tracking-[1rem] text-sm text-orange-400">
-          MMXXIII
-        </p>
-      </div>
+    <footer className='mt-10 mb-36 dark:invert'>
+      <img src='/logo.svg' alt='Mario Gómez U.' className='w-11 h-11 mx-auto'/>
     </footer>
   )
 }

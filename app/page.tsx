@@ -1,25 +1,36 @@
 import Link from 'next/link';
 
+const links = [
+  { name: 'photo', href: '/photography' },
+  { name: 'projects', href: 'https://www.github.com/defcxz' },
+  { name: 'contact', href: 'mailto:hi@def.works'},
+  { name: 'ig', href: 'https://www.instagram.com/defcxz' },
+  { name: 'blog (soon)', href: '' }
+]
+
 export default function Home() {
   return (
-    <main className={'flex min-h-[100dvh] items-center justify-center select-none'}>
-      <div className="container py-16 ">
-        <h1
-          className="flex justify-center px-3 font-bold text-[4rem]">
-          マリオ
-        </h1>
-        <div
-          className={'text-center mt-5'}
-        >
-          <Link href={'https://github.com/defcxz'} target='_blank' className={'font-bold italic mx-2 underline'}>
-            Software Engineer.
-          </Link>
-          <br></br>
-          <Link href={'/photography'} className={'font-bold italic mx-2 underline'}>
-            Photographer
-          </Link> wannabe.
-        </div>
-      </div>
+    <main className='mt-20 md:mt-32 mx-auto w-10/12 md:max-w-2xl'>
+      <header>
+        <h1 className='text-xl font-bold'>Mario Gómez U.</h1>
+        <p className='opacity-65'>Software Engineer</p>
+      </header>
+
+      <p className='mt-10 text-pretty'>
+        Inspired by the constant evolution of technology, I am a guy based on Santiago, Chile, who loves to learn new things and apply craft innovation-driven products and solutions.
+      </p>
+      <section className='mt-10'>
+        <ul className='flex gap-3'>
+          {links.map(({ name, href }) => (
+            <li key={name} className='mb-3'>
+              <Link className='text-pretty opacity-65 hover:opacity-100' href={href}>
+                {name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
     </main>
   );
 }

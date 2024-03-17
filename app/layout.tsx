@@ -1,13 +1,14 @@
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Noto_Serif_JP  } from "next/font/google";
+import { GeistSans } from "geist/font/sans"
 import Navbar from './components/Nav/page'
+import Footer from './components/Footer/page'
 import og from '../public/og.jpeg'
 
 import '../styles/globals.css'
 
-let metadataTitle = 'Mario G. | defcxz: Software Engineer, Photographer Wannabe, I would like to sleep 25 hours a day.';
+let metadataTitle = 'Mario G.';
 let desc = 'This is my little space on the Internet, there is not much to see here for now, but I hope this website will grow over time.';
 export const metadata: Metadata = {
   metadataBase: new URL('https://def.works'),
@@ -42,19 +43,15 @@ export const metadata: Metadata = {
   },
 }
 
-const noto = Noto_Serif_JP({
-  weight: ['300', '400', '900'],
-  subsets: ['latin'],
-})
-
 export default function RootLayout({ children } : { children: React.ReactNode }) {
   return (
-    <html lang="en">
-    <body className={`${noto.className}`}>
+    <html lang="en" className={GeistSans.className}>
+    <body>
       <Navbar/>
         {children}
       <Analytics/>
       <SpeedInsights/>
+      <Footer/>
     </body>
     </html>
   )
