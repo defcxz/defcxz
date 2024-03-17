@@ -17,7 +17,7 @@ export default function Home() {
       </header>
 
       <p className='mt-10 text-pretty'>
-        Inspired by the constant evolution of technology, I am a guy based on Santiago, Chile, who loves to learn new things and apply craft innovation-driven products and solutions.
+        Inspired by the constant evolution of technology, I am a guy based on Santiago de Chile, who loves to learn new things and craft innovation-driven products and solutions.
       </p>
       <section className='mt-10'>
         <ul className='flex gap-3'>
