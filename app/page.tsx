@@ -9,7 +9,7 @@ export default function Home() {
         <p className='opacity-65'>{content.subtitle}</p>
       </header>
 
-      <p className='mt-10 text-pretty whitespace-pre-line md:whitespace-pre'>
+      <p className='mt-10 text-pretty whitespace-pre-wrap'>
         {content.description}
       </p>
       <section className='mt-10'>
