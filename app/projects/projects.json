@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "VANR",
+    "description": "VANR is a place where people could tell stories and share life experiences.",
+    "dateOfExistence": "2021-2023",
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "CMS"
+    ],
+    "link": "https://vanr-cl.tumblr.com"
+  },
+  {
+    "id": 2,
+    "name": "Subsify",
+    "description": "A web platform that allows users to organize and manage their subscriptions and house bills. All in once place.",
+    "dateOfExistence": "2023",
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Django/Python",
+      "Bootstrap"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "To-Do Web",
+    "description": "This is a simple to-do web app that allows users to add, edit, and delete tasks using localStorage.",
+    "dateOfExistence": "2024",
+    "tags": [
+      "HTML",
+      "Tailwind CSS",
+      "TypeScript",
+      "Next.js",
+      "NextUI"
+    ],
+    "link": "https://todo.def.works"
+  }
+]

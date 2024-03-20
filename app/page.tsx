@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 const links = [
+  { name: 'projects', href: '/projects' },
   { name: 'photo', href: '/photography' },
-  { name: 'projects', href: 'https://www.github.com/defcxz' },
   { name: 'contact', href: 'mailto:hi@def.works'},
   { name: 'ig', href: 'https://www.instagram.com/defcxz' },
   { name: 'blog (soon)', href: '' }
@@ -10,7 +10,7 @@ const links = [
 
 export default function Home() {
   return (
-    <main className='mt-20 md:mt-32 mx-auto w-10/12 md:max-w-2xl'>
+    <main className='mt-24 mx-auto w-10/12 md:max-w-2xl'>
       <header>
         <h1 className='text-xl font-bold'>Mario Gómez U.</h1>
         <p className='opacity-65'>Software Engineer</p>

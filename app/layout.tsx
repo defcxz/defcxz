@@ -46,7 +46,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children } : { children: React.ReactNode }) {
   return (
     <html lang="en" className={GeistSans.className}>
-    <body>
+    <body className='selection:bg-gray-900 selection:text-gray-50 dark:selection:bg-gray-200 dark:selection:text-gray-900'>
       <Navbar/>
         {children}
       <Analytics/>

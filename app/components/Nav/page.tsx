@@ -11,15 +11,10 @@ export default function Navbar() {
   }
 
   return (
-    <nav className={'fixed py-5 pl-7 md:pl-56 z-[100]'}>
+    <nav className='fixed top-0 w-screen z-[100] backdrop-blur-lg'>
       <Link href={'/'}>
-        <p
-          className={'text-2xl'}
-          style={{
-            textShadow: '#fff 0 0 10px'
-          }}
-        >
-          {'<'}
+        <p className='text-md my-4 mx-auto w-11/12 md:w-5/6'>
+          home
         </p>
       </Link>
     </nav>
