@@ -1,10 +1,8 @@
 import { Metadata } from 'next'
-import Photogrid from '../components/Photogrid/page'
-import Loading from '../components/Loader/page'
 import { Suspense } from 'react'
-import Image from 'next/image'
-import logo from '@/public/logo.svg'
-import photos from './content.json'
+import Loader from '../components/Loader/page'
+import Photogrid from '../components/Photogrid/page'
+import photos from './photography.json'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://def.works/photography'),
@@ -41,13 +39,18 @@ export const metadata: Metadata = {
 
 export default function Photo() {
   return (
-    <main>
-      <Photogrid/>
-      <div className={'mt-40 lg:mt-36 flex flex-col justify-center items-center'}>
-        <p className={'text-center dark:text-white px-10'}>
-          These are some of my favorite photos, hopefully the next time you visit this page there will be more. ✨
-        </p>
-      </div>
+    <main className='mt-24 mx-auto w-11/12 md:max-w-2xl'>
+      <Suspense fallback={<Loader/>}>
+      <header>
+        <h1 className='text-xl font-bold mb-5'>Photography</h1>
+      </header>
+        <Photogrid/>
+        <div className={'flex flex-col justify-center items-center'}>
+          <p className={'text-center dark:text-white px-10'}>
+            These are some of my favorite photos, hopefully the next time you visit this page there will be more. ✨
+          </p>
+        </div>
+      </Suspense>
     </main>
   )
 }

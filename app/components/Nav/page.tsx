@@ -11,9 +11,9 @@ export default function Navbar() {
   }
 
   return (
-    <nav className='fixed top-0 w-screen z-[100] backdrop-blur-lg'>
+    <nav className='fixed top-0 z-[100] backdrop-blur-lg p-5 rounded-xl m-3'>
       <Link href={'/'}>
-        <p className='text-md my-4 mx-auto w-11/12 md:w-5/6'>
+        <p className='text-md'>
           home
         </p>
       </Link>

@@ -1,0 +1,19 @@
+{
+    "name": "Mario Gómez U.",
+    "subtitle": "Software Engineer",
+    "description": "Inspired by the constant evolution of technology, I am a guy based on Santiago of Chile who loves to learn new things and craft innovation-driven products and solutions. \n\nCurrently working on a government institution as a Fullstack Developer.",
+    "links": [
+        {
+            "name": "projects",
+            "url": "/projects"
+        },
+        {
+            "name": "photo",
+            "url": "/photography"
+        },
+        {
+            "name": "contact",
+            "url": "mailto:hi@def.works"
+        }
+    ]
+}

@@ -11,7 +11,7 @@ export default function Projects () {
       <ul>
         {sortedProjects.map(({name, description , dateOfExistence, tags, link}) => (
           <li key={name}>
-            <div className='my-4 p-4 border-black dark:border-white border-[1px] rounded'>
+            <div className='my-4 p-4 border-stone-400 dark:border-stone-600 border-[1px] rounded'>
               <a target={'_blank'} href={link} className='flex items-center gap-3'>
                 <h2 className='font-bold'>{name}</h2>
                 {link && (
@@ -20,9 +20,9 @@ export default function Projects () {
               </a>
               <p className='text-xs opacity-65 mb-5'>{dateOfExistence}</p>
               <p>{description}</p>
-              <ul className='flex gap-3 mt-3 overflow-x-auto'>
+              <ul className='flex gap-3 mt-10 overflow-x-auto'>
                 {tags.map(tag => (
-                  <li key={tag} className='text-xs text-nowrap hover:cursor-pointer border-[1px] dark:text-white py-2 px-4 rounded-lg'>{tag}</li>
+                  <li key={tag} className='text-xs text-nowrap hover:cursor-pointer bg-stone-100 dark:bg-stone-800 dark:text-white py-2 px-4 rounded-lg'>{tag}</li>
                 ))}
               </ul>
             </div>

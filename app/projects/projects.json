@@ -18,8 +18,6 @@
     "description": "A web platform that allows users to organize and manage their subscriptions and house bills. All in once place.",
     "dateOfExistence": "2023",
     "tags": [
-      "HTML",
-      "CSS",
       "JavaScript",
       "Django/Python",
       "Bootstrap"
@@ -31,8 +29,7 @@
     "description": "This is a simple to-do web app that allows users to add, edit, and delete tasks using localStorage.",
     "dateOfExistence": "2024",
     "tags": [
-      "HTML",
-      "Tailwind CSS",
+      "Tailwind",
       "TypeScript",
       "Next.js",
       "NextUI"
