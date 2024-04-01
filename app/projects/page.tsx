@@ -1,5 +1,6 @@
 import projects from './projects.json'
-import * as React from "react";
+import * as React from 'react'
+import Link from 'next/link'
 
 export default function Projects () {
   const sortedProjects = [...projects].sort((a, b) => b.id - a.id);
@@ -12,12 +13,12 @@ export default function Projects () {
         {sortedProjects.map(({name, description , dateOfExistence, tags, link}) => (
           <li key={name}>
             <div className='my-4 p-4 border-stone-400 dark:border-stone-600 border-[1px] rounded'>
-              <a target={'_blank'} href={link} className='flex items-center gap-3'>
+              <Link target={'_blank'} href={link} className='flex items-center gap-3'>
                 <h2 className='font-bold'>{name}</h2>
                 {link && (
                   <ArrowIcon className='text-xs opacity-65 hover:opacity-100'/>
                   )}
-              </a>
+              </Link>
               <p className='text-xs opacity-65 mb-5'>{dateOfExistence}</p>
               <p>{description}</p>
               <ul className='flex gap-3 mt-10 overflow-x-auto'>

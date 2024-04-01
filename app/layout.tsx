@@ -5,7 +5,6 @@ import { GeistSans } from "geist/font/sans"
 import Navbar from './components/Nav/page'
 import Footer from './components/Footer/page'
 import og from '../public/og.jpeg'
-
 import '../styles/globals.css'
 
 let metadataTitle = 'Mario G.';

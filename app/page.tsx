@@ -1,5 +1,13 @@
-import Link from 'next/link';
 import content from './content.json'
+import Link from 'next/link';
+
+const links = [
+  { name: 'blog', href: '/blog' },
+  { name: 'projects', href: '/projects' },
+  { name: 'photo', href: '/photography' },
+  { name: 'contact', href: 'mailto:hi@def.works'},
+  { name: 'ig', href: 'https://www.instagram.com/defcxz' },
+]
 
 export default function Home() {
   return (
@@ -14,9 +22,9 @@ export default function Home() {
       </p>
       <section className='mt-10'>
         <ul className='flex gap-3'>
-          {content.links.map(({ name, url }) => (
+          {links.map(({ name, href }) => (
             <li key={name} className='mb-3'>
-              <Link className='text-pretty opacity-65 hover:opacity-100' href={url}>
+              <Link className='text-pretty opacity-65 hover:opacity-100' href={href}>
                 {name}
               </Link>
             </li>

@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
+import photos from './photography.json'
 import { Suspense } from 'react'
 import Loader from '../components/Loader/page'
 import Photogrid from '../components/Photogrid/page'
-import photos from './photography.json'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://def.works/photography'),
