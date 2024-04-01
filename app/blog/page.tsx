@@ -55,8 +55,8 @@ export default async function Blog() {
             const formattedDate = format(new Date((page.properties.Created as { created_time: string }).created_time), 'MMMM dd, yyyy', { locale: es });
 
             return (
-              <div className='p-4 border-stone-400 dark:border-stone-600 border-[1px] rounded content-center'>
-                <Link className='flex justify-between items-center hover:font-bold' key={page.id} href={`/blog/${slug}`}>
+              <div className='p-4 border-stone-400 dark:border-stone-600 border-[1px] rounded content-center' key={page.id} >
+                <Link className='flex justify-between items-center hover:font-bold' href={`/blog/${slug}`}>
                   <h2 className='text-lg'>{title}</h2>
                   <p className='text-xs opacity-65'>{formattedDate}</p>
                 </Link>
