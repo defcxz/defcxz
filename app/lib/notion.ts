@@ -1,5 +1,4 @@
 import { Client } from '@notionhq/client';
-import React from "react";
 import {
   BlockObjectResponse,
   PageObjectResponse,
@@ -10,6 +9,7 @@ export const notion = new Client({
   auth: process.env.NOTION_TOKEN,
 });
 
+export const revalidate = 0;
 
 
 export const fetchPages = (async () => {
