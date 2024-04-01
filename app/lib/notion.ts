@@ -11,8 +11,9 @@ export const notion = new Client({
 });
 
 
-export const fetchPages = React.cache(() => {
-  return notion.databases
+
+export const fetchPages = (async () => {
+  const res = await notion.databases
     .query({
       database_id: process.env.NOTION_DATABASE_ID!,
       filter: {
@@ -27,12 +28,13 @@ export const fetchPages = React.cache(() => {
           direction: "ascending"
         }
       ]
-    })
-    .then((res) => res.results as PageObjectResponse[])
+    });
+  return res.results as PageObjectResponse[];
 });
 
-export const fetchPageBySlug = React.cache((slug: string) => {
-  return notion.databases
+
+export const fetchPageBySlug = (async (slug: string) => {
+  const res = await notion.databases
     .query({
       database_id: process.env.NOTION_DATABASE_ID!,
       filter: {
@@ -41,12 +43,12 @@ export const fetchPageBySlug = React.cache((slug: string) => {
           equals: slug,
         },
       },
-    })
-    .then((res) => res.results[0] as PageObjectResponse | undefined);
+    });
+  return res.results[0] as PageObjectResponse;
 });
 
-export const fetchPageBlocks = React.cache((pageId: string) => {
-  return notion.blocks.children
-    .list({ block_id: pageId })
-    .then((res) => res.results as BlockObjectResponse[]);
-});
+export const fetchPageBlocks = async (pageId: string) => {
+  const res = await notion.blocks.children
+    .list({ block_id: pageId });
+  return res.results as BlockObjectResponse[];
+};
