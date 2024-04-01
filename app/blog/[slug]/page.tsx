@@ -14,6 +14,8 @@ type Props = {
   }
 }
 
+export const runtime = 'edge';
+
 export const generateMetadata = async (
   props: Props
 ): Promise<Metadata> => {
