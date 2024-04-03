@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 
 export default function Photo() {
   return (
-    <main className='mt-24 mx-auto w-11/12 md:max-w-2xl'>
+    <main className='mt-24 mx-auto w-10/12 md:max-w-2xl'>
       <Suspense fallback={<Loader/>}>
       <header>
         <h1 className='text-xl font-bold mb-5'>Photography</h1>

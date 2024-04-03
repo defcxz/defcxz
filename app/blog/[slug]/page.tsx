@@ -3,10 +3,9 @@ import { fetchPageBlocks, fetchPageBySlug, notion } from "@/app/lib/notion";
 import { NotionRenderer } from "@notion-render/client";
 import { notFound } from "next/navigation";
 import * as React from "react";
-import Link from "next/link";
 import { format } from 'date-fns';
 import { es } from 'date-fns/locale';
-
+import {Suspense} from "react";
 
 
 export default async function Page({ params }: { params: { slug: string } }) {
@@ -31,13 +30,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
       <head>
         <title>{title}</title>
       </head>
-      <main className='mt-24 mx-auto w-11/12 md:max-w-2xl'>
-        <header>
-          <Link href={'/blog'} className='flex gap-3'>
-            {'<'}
-            <h1 className='text-xl font-bold'>Blog</h1>
-          </Link>
-        </header>
+      <main className='mt-24 mx-auto w-10/12 md:max-w-2xl'>
         <div className='flex items-center mt-5 justify-between'>
           <h2 className='text-lg font-bold'>{title}</h2>
           <p className='opacity-65'>{formattedDate}</p>

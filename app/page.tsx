@@ -11,7 +11,7 @@ const links = [
 
 export default function Home() {
   return (
-    <main className='mt-24 mx-auto w-11/12 md:max-w-2xl'>
+    <main className='mt-24 mx-auto w-10/12 max-h-[100dvh] md:max-w-2xl'>
       <header>
         <h1 className='text-xl font-bold'>{content.name}</h1>
         <p className='opacity-65'>{content.subtitle}</p>

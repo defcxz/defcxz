@@ -6,6 +6,7 @@ import { es } from "date-fns/locale";
 import { Metadata } from "next";
 import photos from "@/app/photography/photography.json";
 
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://def.works/blog'),
 
@@ -43,11 +44,8 @@ export default async function Blog() {
   const pages = await fetchPages().then((pages) => pages)
 
   return (
-    <main className='mt-24 mx-auto w-11/12 md:max-w-2xl'>
+    <main className='mt-24 mx-auto w-10/12 md:max-w-2xl'>
       <div>
-        <header>
-          <h1 className='text-xl font-bold'>Blog</h1>
-        </header>
         <div className='mt-10 flex flex-col gap-3'>
           {pages.map((page) => {
             const title = (page.properties.Title as { title: { plain_text: string }[] }).title[0].plain_text;
