@@ -17,7 +17,7 @@ export default function Navbar() {
     actualRoute = actualRoute + 'photography';
   }
   else {
-    actualRoute = '';
+    return null;
   }
 
   return (
