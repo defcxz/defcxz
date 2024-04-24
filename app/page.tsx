@@ -1,4 +1,5 @@
-import content from './content.json'
+import content from './content.json';
+import '@/public/page.css';
 import Link from 'next/link';
 
 const links = [
@@ -10,13 +11,14 @@ const links = [
 ]
 
 export default function Home() {
+
   return (
-    <main className='mt-24 mx-auto w-10/12 max-h-[100dvh] md:max-w-2xl'>
+    <main className='mt-16 mx-auto w-10/12 max-h-[100dvh] md:max-w-2xl'>
       <header>
-        <h1 className='text-xl font-bold'>{content.name}</h1>
+        <h1 className='text-3xl font-bold name'>{content.name}</h1>
+        <hr className='w-3/12 my-2'></hr>
         <p className='opacity-65'>{content.subtitle}</p>
       </header>
-
       <p className='mt-10 text-pretty whitespace-pre-wrap'>
         {content.description}
       </p>

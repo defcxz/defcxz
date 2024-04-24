@@ -41,9 +41,6 @@ export default function Photo() {
   return (
     <main className='mt-24 mx-auto w-10/12 md:max-w-2xl'>
       <Suspense fallback={<Loader/>}>
-      <header>
-        <h1 className='text-xl font-bold mb-5'>Photography</h1>
-      </header>
         <Photogrid/>
         <div className={'flex flex-col justify-center items-center'}>
           <p className={'text-center dark:text-white px-10'}>

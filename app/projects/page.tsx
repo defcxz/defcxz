@@ -6,9 +6,6 @@ export default function Projects () {
   const sortedProjects = [...projects].sort((a, b) => b.id - a.id);
   return (
     <main className='mt-24 mx-auto w-10/12 md:max-w-2xl'>
-      <header>
-        <h1 className='text-xl font-bold'>My projects</h1>
-      </header>
       <ul>
         {sortedProjects.map(({name, description , dateOfExistence, tags, link}) => (
           <li key={name}>
