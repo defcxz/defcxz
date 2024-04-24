@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import Pug from '@/public/pug.gif';
+import Pug from '../public/pug.gif';
 
 export default function Home() {
   return (
