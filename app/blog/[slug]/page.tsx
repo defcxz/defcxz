@@ -5,8 +5,8 @@ import { notFound } from "next/navigation";
 import * as React from "react";
 import { format } from 'date-fns';
 import { es } from 'date-fns/locale';
-import {Suspense} from "react";
 
+export const runtime = 'edge';
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const post = await fetchPageBySlug(params.slug);

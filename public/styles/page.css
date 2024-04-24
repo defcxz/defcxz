@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Welth Catritz';
-    src: url('fonts/Welth_Catritz_Regular.otf');
+    src: url('../fonts/Welth_Catritz_Regular.otf');
     font-weight: 600;
     font-display: swap;
 }
