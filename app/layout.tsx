@@ -7,7 +7,7 @@ import Footer from './components/Footer/page'
 import og from '../public/og.jpeg'
 import '../styles/globals.css'
 
-let metadataTitle = 'Mario G.';
+let metadataTitle = 'Mario Gómez | Full Stack Developer based in Santiago, Chile';
 let desc = 'This is my little space on the Internet, there is not much to see here for now, but I hope this website will grow over time.';
 export const metadata: Metadata = {
   metadataBase: new URL('https://def.works'),
