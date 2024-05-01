@@ -1,5 +1,5 @@
 import content from './content.json';
-import '@/public/styles/page.css';
+import '@/styles/page.css';
 import Link from 'next/link';
 
 const links = [

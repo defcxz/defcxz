@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import photos from '@/app/photography/photography.json'
 import Image from 'next/image'
+import '@/styles/animations.css'
 
 export default function Photo() {
   return (
@@ -16,7 +17,7 @@ export default function Photo() {
           >
           <figure className='mb-10'>
             <Image
-              className='h-auto w-80 md:w-100 mx-auto md:hover:scale-150 transition-transform duration-300 ease-in-out cursor-pointer'
+              className='img h-auto w-80 md:w-100 mx-auto md:hover:scale-150 transition-transform duration-300 ease-in-out cursor-pointer'
               src={photo.url_foto}
               alt={photo.titulo}
               width={'500'}
