@@ -5,13 +5,13 @@ import Loader from '../components/Loader/page'
 import Photogrid from '../components/Photogrid/page'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://def.works/photography'),
+  metadataBase: new URL('https://def.works/photo'),
 
   title: 'Photography - Mario G.',
   description: 'My space for photography. 📸',
 
   openGraph: {
-    url: 'https://def.works/photography',
+    url: 'https://def.works/photo',
     title: 'Photography - Mario G.',
     description: 'My space for photography. 📸',
     images: [

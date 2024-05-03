@@ -4,7 +4,7 @@ import { format } from 'date-fns'
 import * as React from "react";
 import { es } from "date-fns/locale";
 import { Metadata } from "next";
-import photos from "@/app/photography/photography.json";
+import photos from "@/app/photo/photography.json";
 
 
 export const metadata: Metadata = {
