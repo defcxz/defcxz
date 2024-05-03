@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import photos from '@/app/photography/photography.json'
+import photos from '@/app/photo/photography.json'
 import Image from 'next/image'
 import '@/styles/animations.css'
 

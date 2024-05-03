@@ -5,7 +5,7 @@ import Link from 'next/link';
 const links = [
   { name: 'blog', href: '/blog' },
   { name: 'projects', href: '/projects' },
-  { name: 'photo', href: '/photography' },
+  { name: 'photo', href: '/photo' },
   { name: 'contact', href: 'mailto:hi@def.works'},
   { name: 'ig', href: 'https://www.instagram.com/defcxz' },
 ]
