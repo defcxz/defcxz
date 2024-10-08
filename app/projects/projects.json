@@ -7,8 +7,7 @@
     "tags": [
       "HTML",
       "CSS",
-      "JavaScript",
-      "CMS"
+      "JavaScript"
     ],
     "link": "https://vanr-cl.tumblr.com"
   },
@@ -19,7 +18,7 @@
     "dateOfExistence": "2023",
     "tags": [
       "JavaScript",
-      "Django/Python",
+      "Django",
       "Bootstrap"
     ],
     "link": ""
@@ -32,8 +31,7 @@
     "tags": [
       "Tailwind",
       "TypeScript",
-      "Next.js",
-      "NextUI"
+      "Next.js"
     ],
     "link": "https://todo.def.works"
   }
