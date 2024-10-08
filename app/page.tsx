@@ -3,9 +3,7 @@ import '@/styles/page.css';
 import Link from 'next/link';
 
 const links = [
-  { name: 'blog', href: '/blog' },
   { name: 'projects', href: '/projects' },
-  { name: 'photo', href: '/photo' },
   { name: 'contact', href: 'mailto:hi@def.works'},
   { name: 'ig', href: 'https://www.instagram.com/defcxz' },
 ]
@@ -17,7 +15,7 @@ export default function Home() {
       <header>
         <h1 className='text-3xl font-bold name'>{content.name}</h1>
         <hr className='w-3/12 my-2'></hr>
-        <p className='opacity-65'>{content.subtitle}</p>
+        {/*<p className='opacity-65'>{content.subtitle}</p>*/}
       </header>
       <p className='mt-10 text-pretty whitespace-pre-wrap'>
         {content.description}

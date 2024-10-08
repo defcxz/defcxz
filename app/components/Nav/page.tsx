@@ -13,9 +13,6 @@ export default function Navbar() {
   else if (pathname.startsWith('/projects')) {
     actualRoute = actualRoute + 'projects';
   }
-  else if (pathname.startsWith('/photo')) {
-    actualRoute = actualRoute + 'photography';
-  }
   else {
     return null;
   }
