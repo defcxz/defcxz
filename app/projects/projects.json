@@ -1,15 +1,15 @@
 [
   {
     "id": 1,
-    "name": "VANR",
-    "description": "VANR is a place where people could tell stories and share life experiences.",
-    "dateOfExistence": "2021-2023",
+    "name": "To-Do Web",
+    "description": "This is a simple to-do web app that allows users to add, edit, and delete tasks using localStorage.",
+    "dateOfExistence": "2024",
     "tags": [
-      "HTML",
-      "CSS",
-      "JavaScript"
+      "Tailwind",
+      "TypeScript",
+      "Next.js"
     ],
-    "link": "https://vanr-cl.tumblr.com"
+    "link": "https://todo.def.works"
   },
   {
     "id": 2,
@@ -25,14 +25,14 @@
   },
   {
     "id": 3,
-    "name": "To-Do Web",
-    "description": "This is a simple to-do web app that allows users to add, edit, and delete tasks using localStorage.",
-    "dateOfExistence": "2024",
+    "name": "VANR",
+    "description": "VANR is a place where people could tell stories and share life experiences.",
+    "dateOfExistence": "2021-2023",
     "tags": [
-      "Tailwind",
-      "TypeScript",
-      "Next.js"
+      "HTML",
+      "CSS",
+      "JavaScript"
     ],
-    "link": "https://todo.def.works"
+    "link": "https://vanr-cl.tumblr.com"
   }
 ]

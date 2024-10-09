@@ -1,34 +1,42 @@
+'use client'
+
 import projects from './projects.json';
 import * as React from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export default function Projects() {
-    const sortedProjects = [...projects].sort((a, b) => b.id - a.id);
     return (
         <main className='mt-24 mx-auto w-10/12 lg:w-9/12'>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-3'>
-                {sortedProjects.map(({name, description, dateOfExistence, tags, link}) => (
-                    <div key={name}
-                         className='flex flex-col justify-between p-4 border-stone-400 min-h-56 dark:border-stone-600 border-[1px] rounded-lg'>
-                        <div>
-                            <Link target={'_blank'} href={link} className='flex items-center gap-3'>
-                                <h1 className='font-bold'>{name}</h1>
-                                {link && (
-                                    <ArrowIcon className='text-xs opacity-65 hover:opacity-100'/>
-                                )}
-                            </Link>
-                            <p className='text-xs opacity-65 mb-5'>{dateOfExistence}</p>
-                            <p>{description}</p>
+                {projects.map(({id, name, description, dateOfExistence, tags, link}) => (
+                    <motion.div
+                        key = {id}
+                        initial = {{ opacity: 0 }}
+                        animate = {{ opacity: 1 }}
+                        transition = {{ duration: 1.5, delay: id * 0.2 }}
+                    >
+                        <div className='flex flex-col justify-between p-4 border-stone-400 min-h-56 dark:border-stone-600 border-[1px] rounded-lg'>
+                            <div>
+                                <Link target={'_blank'} href={link} className='flex items-center gap-3'>
+                                    <h1 className='font-bold'>{name}</h1>
+                                    {link && (
+                                        <ArrowIcon className='text-xs opacity-65 hover:opacity-100'/>
+                                    )}
+                                </Link>
+                                <p className='text-xs opacity-65 mb-5'>{dateOfExistence}</p>
+                                <p>{description}</p>
+                            </div>
+                            <div>
+                                <ul className='flex gap-3 mt-4 flex-wrap'>
+                                    {tags.map(tag => (
+                                        <li key={tag}
+                                            className='text-xs hover:cursor-pointer dark:hover:bg-stone-700 dark:bg-stone-800 hover:bg-stone-200 bg-stone-100 dark:text-white py-2 px-4 rounded-lg'>{tag}</li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
-                        <div>
-                            <ul className='flex gap-3 mt-4 flex-wrap'>
-                                {tags.map(tag => (
-                                    <li key={tag}
-                                        className='text-xs hover:cursor-pointer dark:hover:bg-stone-700 dark:bg-stone-800 hover:bg-stone-200 bg-stone-100 dark:text-white py-2 px-4 rounded-lg'>{tag}</li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </main>

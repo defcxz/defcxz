@@ -31,7 +31,6 @@ export default function Home() {
           ))}
         </ul>
       </section>
-
     </main>
   );
 }
