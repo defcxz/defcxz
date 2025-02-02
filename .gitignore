@@ -35,3 +35,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+/bun.lockb
+/.idea/defcxz.iml
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/.gitignore
