@@ -7,16 +7,35 @@ import { motion } from 'framer-motion';
 
 export default function Projects() {
     return (
-        <main className='mt-24 mx-auto w-10/12 lg:w-9/12'>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-3'>
+        <motion.main
+            className='mt-12'
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+        >
+            <motion.p
+                className='mt-10 mb-3 text-pretty whitespace-pre-wrap'
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.2 }}
+            >
+                projects
+            </motion.p>
+
+            <motion.div
+                className='grid grid-cols-1 md:grid-cols-3 gap-3'
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.4 }}
+            >
                 {projects.map(({id, name, description, dateOfExistence, tags, link}) => (
                     <motion.div
-                        key = {id}
-                        initial = {{ opacity: 0 }}
-                        animate = {{ opacity: 1 }}
-                        transition = {{ duration: 1.5, delay: id * 0.2 }}
+                        key={id}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 1.5, delay: id * 0.2 }}
                     >
-                        <div className='flex flex-col justify-between p-4 border-stone-400 min-h-56 dark:border-stone-600 border-[1px] rounded-lg'>
+                        <div className='flex flex-col justify-between p-4 border-stone-400 min-h-80 dark:border-stone-600 border-[1px] rounded-lg'>
                             <div>
                                 <Link target={'_blank'} href={link} className='flex items-center gap-3'>
                                     <h1 className='font-bold'>{name}</h1>
@@ -38,8 +57,8 @@ export default function Projects() {
                         </div>
                     </motion.div>
                 ))}
-            </div>
-        </main>
+            </motion.div>
+        </motion.main>
     )
 }
 
@@ -59,3 +78,4 @@ function ArrowIcon(props: React.SVGProps<SVGSVGElement>) {
         </svg>
     );
 }
+
