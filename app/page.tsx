@@ -142,10 +142,11 @@ export default function Home() {
                 >
                     {projects.map(({id, name, description, dateOfExistence, tags, link}) => (
                         <motion.div
+                            className='cursor-pointer'
                             key={id}
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ duration: 1.5, delay: id * 0.2 }}
+                            initial={{ opacity: 0, filter: 'blur(3px)' }}
+                            animate={{ opacity: 1, filter: 'blur(0)' }}
+                            transition={{ duration: 1.5, delay: 1 + id * 0.2 }}
                         >
                             <div className='flex flex-col justify-between p-4 border-stone-400 min-h-80 dark:border-stone-600 border-[1px] rounded-lg'>
                                 <div>

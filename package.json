@@ -29,7 +29,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@types/node": "^20.17.30",
+    "@types/node": "^20.17.31",
     "@types/react": "^18.3.20",
     "@types/react-dom": "^18.3.6",
     "@types/react-scroll-into-view-if-needed": "^2.1.5",
