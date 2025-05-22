@@ -104,7 +104,7 @@ export default function Home() {
                 >
                     {projects.map(({id, name, description, dateOfExistence, link}) => (
                         <motion.div
-                            className='cursor-pointer hover:scale-[1.05] transition-transform duration-300 hover:bg-stone-100 dark:hover:bg-stone-800'
+                            className='cursor-pointer'
                             key={id}
                             initial={{ opacity: 0, filter: 'blur(3px)' }}
                             animate={{ opacity: 1, filter: 'blur(0)' }}
