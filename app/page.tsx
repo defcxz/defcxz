@@ -1,10 +1,11 @@
 'use client'
 
-import content from './content.json';
+import content from './bio.json';
 import '@/styles/page.css';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import * as React from 'react';
+import projects from './projects.json';
 
 const links = [
     // {name: 'projects', href: '/projects'},
@@ -12,56 +13,17 @@ const links = [
     {name: 'ig', href: 'https://www.instagram.com/defcxz'},
 ]
 
-const projects = [
-    {
-        "id": 1,
-        "name": "To-Do Web",
-        "description": "This is a simple to-do web app that allows users to add, edit, and delete tasks using localStorage.",
-        "dateOfExistence": "2024",
-        "tags": [
-            "Tailwind",
-            "TypeScript",
-            "Next.js"
-        ],
-        "link": "https://def-todo.vercel.app"
-    },
-    {
-        "id": 2,
-        "name": "Subsify",
-        "description": "A web platform that allows users to organize and manage their subscriptions and house bills. All in once place.",
-        "dateOfExistence": "2023",
-        "tags": [
-            "JavaScript",
-            "Django",
-            "Bootstrap"
-        ],
-        "link": ""
-    },
-    {
-        "id": 3,
-        "name": "VANR",
-        "description": "VANR is a place where people could tell stories and share life experiences.",
-        "dateOfExistence": "2021-2023",
-        "tags": [
-            "HTML",
-            "CSS",
-            "JavaScript"
-        ],
-        "link": "https://vanr-cl.tumblr.com"
-    }
-];
-
 const fadeInUpAnimation = {
-    initial: { 
-        opacity: 0, 
-        y: 20, 
+    initial: {
+        opacity: 0,
+        y: 20,
         filter: 'blur(3px)',
         scale: 0.98
     },
-    animate: { 
-        opacity: 1, 
-        y: 0, 
-        filter: 'blur(0px)', 
+    animate: {
+        opacity: 1,
+        y: 0,
+        filter: 'blur(0px)',
         scale: 1
     },
     transition: { duration: 1 }
@@ -132,23 +94,23 @@ export default function Home() {
                     {...fadeInUpAnimation}
                     transition={{ ...fadeInUpAnimation.transition, delay: 0.8 }}
                 >
-                    projects
+                    side projects
                 </motion.p>
 
                 <motion.div
-                    className='grid grid-cols-1 md:grid-cols-3 gap-3'
+                    className='grid grid-cols-1 md:grid-cols-2 gap-3'
                     {...fadeInUpAnimation}
                     transition={{ ...fadeInUpAnimation.transition, delay: 1 }}
                 >
-                    {projects.map(({id, name, description, dateOfExistence, tags, link}) => (
+                    {projects.map(({id, name, description, dateOfExistence, link}) => (
                         <motion.div
-                            className='cursor-pointer'
+                            className='cursor-pointer hover:scale-[1.05] transition-transform duration-300 hover:bg-stone-100 dark:hover:bg-stone-800'
                             key={id}
                             initial={{ opacity: 0, filter: 'blur(3px)' }}
                             animate={{ opacity: 1, filter: 'blur(0)' }}
                             transition={{ duration: 1.5, delay: 1 + id * 0.2 }}
                         >
-                            <div className='flex flex-col justify-between p-4 border-stone-400 min-h-80 dark:border-stone-600 border-[1px] rounded-lg'>
+                            <div className='flex flex-col justify-between p-4 border-stone-400 min-h-56 dark:border-stone-600 border-[1px] rounded-lg'>
                                 <div>
                                     <Link target={'_blank'} href={link} className='flex items-center gap-3'>
                                         <h1 className='font-bold'>{name}</h1>
@@ -158,14 +120,6 @@ export default function Home() {
                                     </Link>
                                     <p className='text-xs opacity-65 mb-5'>{dateOfExistence}</p>
                                     <p>{description}</p>
-                                </div>
-                                <div>
-                                    <ul className='flex gap-3 mt-4 flex-wrap'>
-                                        {tags.map(tag => (
-                                            <li key={tag}
-                                                className='text-xs hover:cursor-pointer dark:hover:bg-stone-700 dark:bg-stone-800 hover:bg-stone-200 bg-stone-100 dark:text-white py-2 px-4 rounded-lg'>{tag}</li>
-                                        ))}
-                                    </ul>
                                 </div>
                             </div>
                         </motion.div>
