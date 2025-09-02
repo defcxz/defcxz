@@ -1,0 +1,58 @@
+---
+import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+
+// Cargar los datos de proyectos desde el JSON (más eficiente)
+const response = await fetch(`${Astro.url.origin}/projects.json`);
+const projects = await response.json();
+---
+
+<BaseLayout title="mg. - fullstack developer 🧑🏻‍💻 (now on Astro!)" description="Mario Gomez U - Fullstack Developer based in Santiago, Chile">
+	<main class="mt-16 mx-auto w-10/12 md:max-w-2xl min-h-[100dvh]">
+		<header>
+			<h1 class="text-3xl font-bold font-welth">
+				Mario Gomez U.
+			</h1>
+			<hr class="w-3/12 my-2">
+		</header>
+		
+		<p class="mt-10 whitespace-pre-wrap text-pretty text-justify">
+			Inspired by the constant evolution of technology, I am a Software Engineer based on Santiago de Chile who loves to learn new things and craft innovation-driven products and solutions. 
+			<br>
+			Currently working on a government institution as a Fullstack Dev Lead.
+		</p>
+		
+		<section class="mt-10">
+			<ul class="flex gap-3">
+				<li class="mb-3">
+					<a class="text-pretty opacity-65 hover:opacity-100" href="mailto:mralejandrogu@gmail.com">contact</a>
+				</li>
+				<li class="mb-3">
+					<a class="text-pretty opacity-65 hover:opacity-100" href="https://www.instagram.com/defcxz">ig</a>
+				</li>
+			</ul>
+		</section>
+		
+		<section class="mt-12">
+			<!-- sección de proyectos -->
+			<p class="mt-10 mb-3 text-pretty whitespace-pre-wrap">
+				side projects
+			</p>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+				{projects.map((project) => (
+					<ProjectCard project={project} />
+				))}
+			</div>
+		</section>
+
+		<footer class="my-24">
+			<img 
+				src="/assets/logo.svg" 
+				alt="logo"
+				class="invert w-12 mx-auto"
+				loading="lazy"
+			>
+		</footer>
+	</main>
+</BaseLayout>
