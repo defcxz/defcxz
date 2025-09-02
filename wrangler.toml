@@ -11,3 +11,6 @@ build_output_directory = "dist"
 
 [assets]
 directory = "./dist"
+
+[assets.ignore]
+patterns = ["_worker.js", "server/**"]
