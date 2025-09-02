@@ -1,0 +1,13 @@
+name = "defcxz"
+compatibility_date = "2024-01-15"
+
+[build]
+command = "npm run build:cf"
+cwd = "."
+
+[build.environment_variables]
+NODE_VERSION = "22"
+
+[[pages_builds]]
+build_command = "npm run build:cf"
+build_output_directory = "dist"
