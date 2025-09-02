@@ -7,6 +7,9 @@ cwd = "."
 
 [build.environment_variables]
 NODE_VERSION = "22"
+NPM_CONFIG_OPTIONAL = "false"
+NPM_CONFIG_FUND = "false"
+NPM_CONFIG_AUDIT = "false"
 
 [[pages_builds]]
 build_command = "npm run build:cf"

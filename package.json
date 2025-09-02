@@ -4,13 +4,14 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "npm ci && astro build",
-    "build:cf": "rm -rf node_modules package-lock.json && npm install && astro build",
+    "build": "astro build",
+    "build:cf": "npm ci --force && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "@astrojs/react": "^4.3.0",
+    "@rollup/rollup-linux-x64-gnu": "^4.28.1",
     "@tailwindcss/vite": "^4.1.12",
     "astro": "^5.13.5",
     "framer-motion": "^12.23.12",
