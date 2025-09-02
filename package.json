@@ -5,7 +5,6 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "build:cf": "npm ci --force && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
