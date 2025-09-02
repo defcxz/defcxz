@@ -8,17 +8,8 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   integrations: [react()],
   vite: {
-    plugins: [tailwindcss()],
-    define: {
-      global: 'globalThis'
-    }
+    plugins: [tailwindcss()]
   },
   output: 'server',
-  adapter: cloudflare({
-    imageService: 'cloudflare',
-    runtime: {
-      mode: 'local',
-      type: 'pages'
-    }
-  }),
+  adapter: cloudflare()
 });
