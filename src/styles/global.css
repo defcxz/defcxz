@@ -19,6 +19,12 @@
     font-family: 'Welth Catritz', sans-serif;
 }
 
+
+/* Animaciones con Framer Motion - estilos base */
+.framer-animated {
+    will-change: opacity, transform;
+}
+
 @media (prefers-color-scheme: light) {
     :root {
       background-color: rgb(255, 255, 255);

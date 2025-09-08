@@ -1,0 +1,88 @@
+---
+// Componente wrapper para Framer Motion
+---
+
+<div id="framer-motion-root">
+  <slot />
+</div>
+
+<script>
+  import { motion } from 'framer-motion';
+  
+  // Configuración de animaciones
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+      }
+    }
+  };
+  
+  const itemVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 30 
+    },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      }
+    }
+  };
+  
+  const logoVariants = {
+    hidden: { 
+      opacity: 0, 
+      scale: 0.9 
+    },
+    visible: { 
+      opacity: 1, 
+      scale: 1,
+      transition: {
+        duration: 0.8,
+        delay: 2,
+        ease: "easeOut"
+      }
+    }
+  };
+  
+  // Función para inicializar las animaciones
+  function initAnimations() {
+    const root = document.getElementById('framer-motion-root');
+    if (!root) return;
+    
+    // Crear el contenedor principal con animación
+    const container = motion.div({
+      variants: containerVariants,
+      initial: "hidden",
+      animate: "visible"
+    });
+    
+    // Aplicar estilos al contenedor
+    container.style.width = '100%';
+    root.appendChild(container);
+    
+    // Mover todos los hijos al contenedor animado
+    const children = Array.from(root.children).filter(child => child !== container);
+    children.forEach(child => {
+      const motionChild = motion.div({
+        variants: itemVariants
+      });
+      motionChild.appendChild(child);
+      container.appendChild(motionChild);
+    });
+  }
+  
+  // Ejecutar cuando el DOM esté listo
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAnimations);
+  } else {
+    initAnimations();
+  }
+</script>

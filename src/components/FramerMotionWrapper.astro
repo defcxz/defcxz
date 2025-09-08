@@ -1,0 +1,73 @@
+---
+export interface Props {
+  children: any;
+}
+
+const { children } = Astro.props;
+---
+
+<div id="framer-wrapper">
+  <slot />
+</div>
+
+<script>
+  // Función para animar elementos con efecto Framer Motion
+  function initFramerAnimations() {
+    const wrapper = document.getElementById('framer-wrapper');
+    if (!wrapper) return;
+    
+    // Configuración de animaciones similar a Framer Motion
+    const staggerDelay = 0.2; // 200ms entre elementos
+    const baseDelay = 0.1; // Delay inicial
+    
+    // Función para animar un elemento
+    function animateElement(element: HTMLElement, delay: number) {
+      // Establecer estado inicial
+      element.style.opacity = '0';
+      element.style.transform = 'translateY(30px)';
+      element.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+      
+      // Animar después del delay
+      setTimeout(() => {
+        element.style.opacity = '1';
+        element.style.transform = 'translateY(0)';
+      }, delay * 1000);
+    }
+    
+    // Función para encontrar todos los elementos con data-delay
+    function findAnimatedElements(container: HTMLElement): HTMLElement[] {
+      const elements: HTMLElement[] = [];
+      
+      function traverse(node: Element) {
+        if (node.hasAttribute('data-delay')) {
+          elements.push(node as HTMLElement);
+        }
+        
+        for (const child of node.children) {
+          traverse(child);
+        }
+      }
+      
+      traverse(container);
+      return elements;
+    }
+    
+    // Encontrar todos los elementos animados
+    const animatedElements = findAnimatedElements(wrapper);
+    
+    // Animar cada elemento con su delay específico
+    animatedElements.forEach((element, index) => {
+      const customDelay = parseFloat(element.getAttribute('data-delay') || '0');
+      const delay = customDelay > 0 ? customDelay : baseDelay + (index * staggerDelay);
+      
+      animateElement(element, delay);
+    });
+  }
+  
+  // Ejecutar cuando el DOM esté listo
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFramerAnimations);
+  } else {
+    initFramerAnimations();
+  }
+</script>
