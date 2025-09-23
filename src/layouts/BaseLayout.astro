@@ -2,9 +2,19 @@
 export interface Props {
   title: string;
   description?: string;
+  image?: string; // path or absolute URL for social preview
 }
 
-const { title, description = "Mario Gomez U - Fullstack Developer" } = Astro.props;
+const {
+  title,
+  description = "Mario Gomez U - Fullstack Developer",
+  image = "/assets/logo.svg",
+} = Astro.props;
+
+const url = Astro.url; // current page URL
+const siteOrigin = url.origin;
+const canonical = url.toString();
+const imageUrl = image.startsWith('http') ? image : `${siteOrigin}${image}`;
 ---
 
 <!DOCTYPE html>
@@ -15,6 +25,56 @@ const { title, description = "Mario Gomez U - Fullstack Developer" } = Astro.pro
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" content={Astro.generator} />
   <meta name="description" content={description} />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href={canonical} />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={imageUrl} />
+  <meta property="og:image:alt" content={title} />
+  <meta property="og:site_name" content="defcxz.dev" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={imageUrl} />
+
+  <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+
+  <script type="application/ld+json">
+    {JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: title,
+      url: canonical,
+      inLanguage: 'en',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: `${siteOrigin}/?q={search_term_string}`,
+        'query-input': 'required name=search_term_string'
+      }
+    })}
+  </script>
+  <script type="application/ld+json">
+    {JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: 'Mario Gomez U',
+      jobTitle: 'Fullstack Developer',
+      url: canonical,
+      image: imageUrl,
+      sameAs: [
+        'mailto:mralejandrogu@gmail.com',
+        'https://www.instagram.com/defcxz'
+      ]
+    })}
+  </script>
   <title>{title}</title>
 </head>
 <body class='selection:bg-gray-900 selection:text-gray-50 dark:selection:bg-gray-200 dark:selection:text-gray-900'>
