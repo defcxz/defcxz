@@ -8,13 +8,39 @@ export interface Props {
 const {
   title,
   description = "Mario Gomez U - Fullstack Developer",
-  image = "/assets/logo.svg",
+  image = "/assets/og.png",
 } = Astro.props;
 
 const url = Astro.url; // current page URL
 const siteOrigin = url.origin;
 const canonical = url.toString();
 const imageUrl = image.startsWith('http') ? image : `${siteOrigin}${image}`;
+
+const websiteJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: title,
+  url: canonical,
+  inLanguage: 'en',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: `${siteOrigin}/?q={search_term_string}`,
+    'query-input': 'required name=search_term_string'
+  }
+});
+
+const personJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Mario G.',
+  jobTitle: 'Fullstack Developer',
+  url: canonical,
+  image: imageUrl,
+  sameAs: [
+    'mailto:mralejandrogu@gmail.com',
+    'https://www.instagram.com/defcxz'
+  ]
+});
 ---
 
 <!DOCTYPE html>
@@ -47,34 +73,8 @@ const imageUrl = image.startsWith('http') ? image : `${siteOrigin}${image}`;
   <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
 
-  <script type="application/ld+json">
-    {JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'WebSite',
-      name: title,
-      url: canonical,
-      inLanguage: 'en',
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: `${siteOrigin}/?q={search_term_string}`,
-        'query-input': 'required name=search_term_string'
-      }
-    })}
-  </script>
-  <script type="application/ld+json">
-    {JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'Person',
-      name: 'Mario Gomez U',
-      jobTitle: 'Fullstack Developer',
-      url: canonical,
-      image: imageUrl,
-      sameAs: [
-        'mailto:mralejandrogu@gmail.com',
-        'https://www.instagram.com/defcxz'
-      ]
-    })}
-  </script>
+  <script type="application/ld+json" set:html={websiteJsonLd}></script>
+  <script type="application/ld+json" set:html={personJsonLd}></script>
   <title>{title}</title>
 </head>
 <body class='selection:bg-gray-900 selection:text-gray-50 dark:selection:bg-gray-200 dark:selection:text-gray-900'>

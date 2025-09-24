@@ -29,3 +29,6 @@ pnpm-debug.log*
 # cloudflare wrangler local state and dev vars
 .wrangler/
 .dev.vars
+
+# prefer npm on CI (Cloudflare Pages)
+bun.lock
