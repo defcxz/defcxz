@@ -1,4 +1,40 @@
+# robots.txt para defcxz.dev
+# Sitio web personal de Mario Gomez U. - Fullstack Developer
+
+# Permitir acceso a todos los bots
 User-agent: *
 Allow: /
 
+# Disallow common paths that no necesitan indexación
+Disallow: /scripts/
+Disallow: /_astro/
+Disallow: /dist/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.vscode/
+Disallow: /wrangler.toml
+Disallow: /*.json$
+Disallow: /*.config.*$
+
+# Permitir específicamente el contenido público importante
+Allow: /assets/
+Allow: /projects.json
+Allow: /robots.txt
+Allow: /sitemap*.xml
+
+# Sitemap
 Sitemap: https://defcxz.dev/sitemap-index.xml
+Sitemap: https://defcxz.dev/sitemap.xml
+
+# Configuración específica para bots de redes sociales
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Crawl-delay para ser respetuoso con el servidor
+Crawl-delay: 1
