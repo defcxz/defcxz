@@ -26,10 +26,6 @@ Allow: /sitemap*.xml
 Sitemap: https://defcxz.dev/sitemap-index.xml
 Sitemap: https://defcxz.dev/sitemap.xml
 
-# Configuración específica para bots de redes sociales
-User-agent: facebookexternalhit
-Allow: /
-
 User-agent: Twitterbot
 Allow: /
 
