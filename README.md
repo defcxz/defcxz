@@ -8,7 +8,7 @@
 - Firebase
 
 ### Algunos proyectos
-- PixelCode (2025) — Refactor de backend a Bun/Elysia; eventos y certificados. [pixelcode.cl](https://pixelcode.cl)
+- PixelCode (2025) — Refactor de backend a Bun/Elysia; eventos y certificados. [pixelcode.cl](https://pixelcodepro.com)
 - To-Do Web (2024) — App de tareas con localStorage. [def-todo.vercel.app](https://def-todo.vercel.app)
 - Subsify (2023) — Gestión de suscripciones y gastos del hogar.
 - VANR (2021–2023) — Historias y experiencias compartidas. [vanr-cl.tumblr.com](https://vanr-cl.tumblr.com)
