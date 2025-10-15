@@ -71,8 +71,28 @@ const personJsonLd = JSON.stringify({
   <script type="application/ld+json" set:html={websiteJsonLd}></script>
   <script type="application/ld+json" set:html={personJsonLd}></script>
   <title>{title}</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  
+  <style>
+    @import '../styles/global.css';
+
+    * {
+        font-family: 'Space Mono';
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+  </style>
+
 </head>
-<body class='selection:bg-gray-900 selection:text-gray-50 dark:selection:bg-gray-200 dark:selection:text-gray-900'>
+<body class='selection:bg-gray-900 selection:text-gray-50 dark:selection:bg-gray-200 dark:selection:text-gray-900' style="margin: 0; padding: 0; overflow: hidden;">
   <slot />
 </body>
 </html>
