@@ -1,73 +1,87 @@
 ---
-
+import PolygonalSphere from '../components/PolygonalSphere.jsx';
 ---
 <div>
     <div class="
-        grid h-[100dvh] grid-cols-7 grid-rows-[auto_auto_1fr_1fr] [&>*]:border [&>*]:border-neutral-500 [&>*]:p-4
+        grid h-[100dvh] grid-cols-7 grid-rows-[auto_auto_1fr_1fr_auto] [&>*]:border [&>*]:border-neutral-500 [&>*]:p-4
     ">
-    <div class="col-span-7 text-left">
-        <div class="flex justify-between items-center w-full">
-            <div class="mx-auto text-center">
-                <h1 class="text-xl font-medium tracking-widest uppercase m-0">Mario Gómez U</h1>
-                <p class="text-xs text-neutral-400 m-0">
-                    SYSTEM DATE <span id="last-update" class="text-white"></span>
-                </p>
-            </div>
-            
-            <div class="flex items-center gap-2 text-xs [&>*]:cursor-pointer [&>*]:border [&>*]:border-neutral-500 [&>*]:px-2 [&>*]:py-1 [&>*]:hover:bg-amber-50 [&>*]:hover:text-black">
-                <span>JM</span>
-                <span>SW</span>
-                <span>FM</span>
-                <span>RW</span>
+        <div class="col-span-7 text-left">
+            <div class="flex justify-between items-center w-full">
+                <div class="mx-auto text-center py-2">
+                    <div class="flex items-center justify-center gap-2">
+                        <span class="inline-block align-middle w-2 h-2 rounded-full bg-red-500 animate-pulse" title="En vivo" style="box-shadow: 0 0 8px 2px rgba(255,0,0,0.6);"></span>
+                        <h1 class="text-xl font-bold tracking-widest uppercase m-0">/defcx</h1>
+                    </div>
+                    <p class="text-xs text-neutral-400 m-0">
+                        SYSTEM DATE <span id="last-update" class="text-white"></span>
+                    </p>
+                </div>
+
+                <div class="flex items-center gap-2 text-xs [&>*]:cursor-pointer [&>*]:border [&>*]:border-neutral-500 [&>*]:px-2 [&>*]:py-1 [&>*]:hover:bg-amber-50 [&>*]:hover:text-black">
+                    <span>JM</span>
+                    <span>SW</span>
+                    <span>FM</span>
+                    <span>RW</span>
+                </div>
             </div>
         </div>
-    </div>
-    
-    <div class="col-span-3 row-start-2 text-center text-lg">
-        Projects
-    </div>
-    <div class="col-span-4 col-start-4 row-start-2 text-center">9</div>
-    
-    <div class="col-start-1 row-start-3 text-center">4</div>
-    <div class="col-start-2 row-start-3 text-center">5</div>
-    <div class="col-start-3 row-start-3 text-center">6</div>
-    <div class="col-span-4 row-span-2 col-start-4 row-start-3 text-center">10</div>
-    
-    <div class="col-start-1 row-start-4 text-center">7</div>
-    <div class="col-span-2 col-start-2 row-start-4 text-center">8</div>
-</div>
 
-<script>
-    function updateTime() {
-        const now = new Date();
-        const formattedDate = now.toLocaleDateString('en-GB', {
-            day: '2-digit',
-            month: '2-digit',
-            year: 'numeric'
-        });
-        const formattedTime = now.toLocaleTimeString('en-US', {
-            hour12: false,
-            hour: '2-digit',
-            minute: '2-digit',
-            second: '2-digit'
-        });
-        const timeElement = document.getElementById('last-update');
-        if (timeElement) {
-            timeElement.textContent = `${formattedDate} ${formattedTime}`;
+        <div class="col-span-3 col-start-1 row-start-2 text-center text-lg">
+            CHAT
+        </div>
+        <div class="col-span-4 col-start-4 row-start-2 text-center">NOW PLAYING: XXXXXXXXX - XXXXXXX</div>
+
+        <div class="col-span-5 row-span-2 col-start-4 row-start-3 text-center">
+            <div class="w-full mx-auto h-full flex justify-center items-center">
+                <PolygonalSphere
+                        client:visible
+                        size={800}
+                        lineColor="hsl(0 100% 100%)"
+                        lineWidth={0.5}
+                        animationDuration={300}
+                        rotationX={true}
+                        rotationY={true}
+                        polygonCount={30}
+                        perspective={500}
+                />
+            </div>
+        </div>
+
+        <div class="col-start-1 row-start-3 row-end-5 text-xs">USUARIO</div>
+        <div class="col-span-2 col-start-2 row-start-3 row-end-5 text-xs">MENSAJE</div>
+    </div>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const formattedDate = now.toLocaleDateString('en-GB', {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric'
+            });
+            const formattedTime = now.toLocaleTimeString('en-US', {
+                hour12: false,
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+            const timeElement = document.getElementById('last-update');
+            if (timeElement) {
+                timeElement.textContent = `${formattedDate} ${formattedTime}`;
+            }
         }
-    }
-    
-    // Actualiza la hora al cargar y luego cada segundo.
-    // Si usas un framework como Astro, Svelte o React, es mejor
-    // manejar esto dentro del ciclo de vida del componente.
-    document.addEventListener('DOMContentLoaded', () => {
-        updateTime();
-        setInterval(updateTime, 1000);
-    });
-</script>
 
-<style>
-    html {
-    background-color: #0b0b0d !important;
-    }
-</style>
+        // Actualiza la hora al cargar y luego cada segundo.
+        // Si usas un framework como Astro, Svelte o React, es mejor
+        // manejar esto dentro del ciclo de vida del componente.
+        document.addEventListener('DOMContentLoaded', () => {
+            updateTime();
+            setInterval(updateTime, 1000);
+        });
+    </script>
+
+    <style>
+        html {
+            background-color: #0b0b0d !important;
+        }
+    </style>
+</div>
