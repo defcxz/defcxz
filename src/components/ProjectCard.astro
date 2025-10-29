@@ -1,13 +1,8 @@
 ---
+import type { Project } from '../types/project';
+
 export interface Props {
-  project: {
-    id: number;
-    name: string;
-    description: string;
-    dateOfExistence: string;
-    tags: string[];
-    link: string;
-  };
+  project: Project;
 }
 
 const { project } = Astro.props;
@@ -19,8 +14,10 @@ const { project } = Astro.props;
       {project.link ? (
         <a 
           target="_blank" 
+          rel="noopener noreferrer"
           class="flex items-center gap-3" 
           href={project.link}
+          aria-label={`Visit ${project.name} website`}
         >
           <h1 class="font-bold">{project.name}</h1>
           <svg 
@@ -29,6 +26,7 @@ const { project } = Astro.props;
             height="1.3em" 
             width="1.3em" 
             class="text-xs opacity-65 hover:opacity-100"
+            aria-hidden="true"
           >
             <path 
               fill-rule="evenodd" 

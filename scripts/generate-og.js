@@ -1,12 +1,14 @@
 #!/usr/bin/env node
 import fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { PNG } from 'pngjs';
 
 const width = 1200;
 const height = 630;
 
-const __dirname = path.dirname(new URL(import.meta.url).pathname);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const outDir = path.join(__dirname, '..', 'public', 'assets');
 const outPath = path.join(outDir, 'og.png');
 
